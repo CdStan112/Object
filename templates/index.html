@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paginated Books</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div id="books"></div>
+    <button id="prevPage">Previous Page</button>
+    <button id="nextPage">Next Page</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let currentPage = 1;
+        const perPage = 10;
+
+        function fetchBooks(page) {
+            $.ajax({
+                type: 'POST',
+                url: '/books',
+                contentType: 'application/json',
+                data: JSON.stringify({ page: page, per_page: perPage }),
+                success: function(response) {
+                    displayBooks(response.books);
+                    updatePaginationButtons(response);
+                }
+            });
+        }
+
+        function displayBooks(books) {
+            let booksHtml = '';
+            for (let book of books) {
+                booksHtml += `<div>Title: ${book.title}, Author: ${book.author}, Info: ${book.info}</div>`;
+            }
+            $('#books').html(booksHtml);
+        }
+
+        function updatePaginationButtons(response) {
+            $('#prevPage').prop('disabled', response.page === 1);
+            $('#nextPage').prop('disabled', response.page === response.total_pages);
+        }
+
+        $('#prevPage').on('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                fetchBooks(currentPage);
+            }
+        });
+
+        $('#nextPage').on('click', function() {
+            if (currentPage < response.total_pages) {
+                currentPage++;
+                fetchBooks(currentPage);
+            }
+        });
+
+        // initial fetch
+        fetchBooks(currentPage);
+    </script>
+</body>
+</html>

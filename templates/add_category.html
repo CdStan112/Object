@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Category</title>
+</head>
+<body>
+    <h2>Add a Category</h2>
+    <form id="addCategoryForm">
+        <div>
+            <label for="categoryName">Category Name:</label>
+            <input type="text" id="categoryName" name="categoryName" required autocomplete="off">
+        </div>
+        <button type="submit">Add Category</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#addCategoryForm').submit(function(e) {
+            e.preventDefault();
+
+            let categoryName = $('#categoryName').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/add_category', // Replace with the appropriate Flask route
+                contentType: 'application/json',
+                data: JSON.stringify({ category_name: categoryName }),
+                success: function(response) {
+                    alert('Category added successfully!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
