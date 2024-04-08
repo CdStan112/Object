@@ -1,14 +1,14 @@
 import random
 import string
 
-from flask import Flask, render_template, Response, jsonify, request
+from flask import Flask, Response, jsonify, request, send_from_directory, render_template
 from flask_bcrypt import Bcrypt
 from sqlalchemy import func
 
 from models import db, BookCategory
 from models.Book import Book
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///library_db.sqlite"
 
 db.init_app(app)
@@ -16,8 +16,39 @@ bcrypt = Bcrypt(app)
 
 
 @app.route('/')
-def hello_world():
-    return render_template('index.html')
+def index():
+    return send_from_directory('static', 'index.html')
+
+
+@app.route('/books', methods=['GET'])
+def books():
+    return send_from_directory('static', 'books.html')
+
+
+@app.route('/books', methods=['POST'])
+def fetch_books():
+    selected_books = Book.query.filter(Book.categories.any(BookCategory.id.in_(request.json['category_ids']))).all()
+    books_list = []
+    for book in selected_books:
+        # Retrieve the photo URI if it exists
+        photo_uri = book.photo.uri if book.photo else None
+
+        book_data = {
+            'id': book.id,
+            'title': book.title,
+            'author': book.author,
+            'info': book.info,
+            'photo_uri': photo_uri,
+            'categories': [category.name for category in book.categories]
+        }
+        books_list.append(book_data)
+
+    return jsonify(books_list)
+
+
+@app.route('/get_categories')
+def get_categories():
+    return jsonify({category.id: category.name for category in BookCategory.query.all()})
 
 
 @app.route('/add_book', methods=['GET'])

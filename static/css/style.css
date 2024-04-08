@@ -139,13 +139,13 @@ body h2 {
 
 .news-btn.prev {
     left: 20vw;
-    background-image: url();
+    background-image: url(../img/arrow_back.svg);
     background-position: 25% 50%;
 }
 
 .news-btn.next {
     right: 20vw;
-    background-image: url();
+    background-image: url(../img/arrow_forward.svg);
     background-position: 75% 50%;
 }
 
@@ -285,7 +285,7 @@ body h2 {
 .button-find {
     width: 25px;
     height: 25px;
-    background: transparent url() no-repeat center/cover;
+    background: transparent url(../img/search.svg) no-repeat center/cover;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.2);
     border: 0;
