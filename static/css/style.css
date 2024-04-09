@@ -230,7 +230,7 @@ body h2 {
 }
 
 
-.check{
+#check{
     width: 100%;
     border-top: 3px solid rgb(11, 231, 11);
     background-color: #19b5fe;
