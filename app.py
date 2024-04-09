@@ -5,7 +5,7 @@ from flask import Flask, Response, jsonify, request, send_from_directory, render
 from flask_bcrypt import Bcrypt
 from sqlalchemy import func
 
-from models import db, BookCategory
+from models import db, BookCategory, Photo
 from models.Book import Book
 
 app = Flask(__name__, static_url_path='/static')
@@ -88,20 +88,21 @@ with app.app_context():
     db.drop_all()
     db.create_all()
 
+    db.session.add(Photo(uri='../static/img/example1.jpg'))
+
     for i in range(10):
         db.session.add(BookCategory(name='category' + str(i)))
 
     for i in range(100):
         book = Book(title=''.join(random.choices(string.ascii_letters + '    ', k=20)),
-                    author=''.join(random.choices(string.ascii_letters + '   ', k=10))
+                    author=''.join(random.choices(string.ascii_letters + '   ', k=10)),
+                    photo_id=1
                     )
         book.categories.extend(
             BookCategory.query.filter(BookCategory.id.in_(range(10))).order_by(func.random()).limit(2).all())
 
         db.session.add(book)
         db.session.commit()
-
-    print(BookCategory.query.get(1).books)
 
 if __name__ == '__main__':
     app.run()
