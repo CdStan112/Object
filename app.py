@@ -29,17 +29,17 @@ def books():
 def fetch_books():
     selected_books = Book.query.filter(Book.categories.any(BookCategory.id.in_(request.json['category_ids']))).all()
     books_list = []
-    for book in selected_books:
+    for _book in selected_books:
         # Retrieve the photo URI if it exists
-        photo_uri = book.photo.uri if book.photo else None
+        photo_uri = _book.photo.uri if _book.photo else None
 
         book_data = {
-            'id': book.id,
-            'title': book.title,
-            'author': book.author,
-            'info': book.info,
+            'id': _book.id,
+            'title': _book.title,
+            'author': _book.author,
+            'info': _book.info,
             'photo_uri': photo_uri,
-            'categories': [category.name for category in book.categories]
+            'categories': [category.name for category in _book.categories]
         }
         books_list.append(book_data)
 
@@ -70,10 +70,10 @@ def add_book_request():
 def data():
     if request.json['category'] is None:
         return Response(status=500)
-    books = BookCategory.query.get(request.json['category']).books
+    _books = BookCategory.query.get(request.json['category']).books
 
     books_list = []
-    for _book in books:
+    for _book in _books:
         books_list.append({
             'id': _book.id,
             'title': _book.title,
