@@ -13,7 +13,6 @@ function createBookCard(book) {
     const bookInfoDiv = document.createElement('div');
     bookInfoDiv.classList.add('book-info');
     const bookInfoText = document.createElement('p');
-    bookInfoText.classList.add('book-info-func');
     bookInfoText.textContent = book.info;
     bookInfoDiv.appendChild(bookInfoText);
     bookCard.appendChild(bookInfoDiv);

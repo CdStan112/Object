@@ -1,35 +1,64 @@
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Montserrat,Arial,sans-serif;
     font-weight: 400;
     text-align: center;
     font-size: 1.8rem;
     margin: 0;
-    background: darkblue;
+    background: #ffffff;
 }
+.center {
+}
+
+.header{
+    background: #f36565;
+}
+
 
 /*Логотип и кнопки*/
 .wrap1 {
     display: flex;
     padding: 20px;
-    background: darkblue;
+
     justify-content: space-between;
 }
 
 /*Логотип*/
-.logo img {
+/*.logo img {
     display: flex;
     width: 80px;
-    background-color: aliceblue;
     margin-right: 2em;
+}*/
+
+.links{
+    display: flex;
+    gap:1px;
+    align-items: center;
 }
 
 /*Кнопки вход и регистрация*/
 .navig {
+    color: orange;
+    text-decoration: none;
     display: flex;
     gap: 20px;
     align-items: center;
+}
+.register {
+    padding: 5px;
+    border: 1px solid orange;
+    border-radius: 15px;
+}
 
+a:visited{
+    color: inherit;
+}
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color:orange;
 }
 
 /*Стиль кнопок*/
@@ -69,9 +98,10 @@ ul {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #121e15;
+    background-color: #576158;
 
 }
+
 
 /*Карусель*/
 
@@ -198,12 +228,12 @@ body h2 {
 .container{
         padding-top: 100px;
         width: 100%;
-        color: white;
+
 
 }
 
 .footer_wrapper{
-    background-color: #121e15;
+    background-color: #2a312b;
     height: 30vh;
 }
 
@@ -211,40 +241,39 @@ body h2 {
 
 .forms h1{
     font-weight: 400;
-    background-color: red;
+
     text-align: start;
     font-size: 2.4rem;
 }
 
 
 .check{
-    background-color: green;
+
     text-align: start;
 
 
 }
 .forms label{
     font-weight: 400;
-    background-color: red;
+
     font-size: 1.1rem;
 }
 
 
 #check{
     width: 100%;
-    border-top: 3px solid rgb(11, 231, 11);
-    background-color: #19b5fe;
+    border-top: 3px solid rgb(0, 0, 0);
+
 
     padding-top: 10px;
     
 }
 
 .forms{
-    border-right: 3px solid rgb(0, 255, 106);
+    border-right: 3px solid rgb(0, 0, 0);
     flex:0.2;
 
 
-    background-color: aliceblue;
 }
 
 .main{
@@ -255,7 +284,7 @@ body h2 {
 .bodyDiv{
     text-align: start;
     flex:1;
-    background-color: gray;
+
 }
 
 /*Второй див*/
@@ -271,7 +300,7 @@ body h2 {
 .book-img{
     height: 150px;
     width: 300px;
-    background-color: #19b5fe;
+
 }
 .book-img img{
     height: 150px;
@@ -279,7 +308,7 @@ body h2 {
 }
 .book-info{
     width: 600px;
-    background-color: aquamarine;
+
 }
 
 .button-find {

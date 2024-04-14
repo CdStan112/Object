@@ -7,68 +7,80 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-<header>
-    <div class="wrap1">
-        <a class="logo" href="">
-            <img src="" alt="Логотип"/>
-        </a>
-        <ul class="navig">
-            <li><a href="">Вход</a></li>
-            <li><a href="">Регистрация</a></li>
-        </ul>
-    </div>
-    <div class="wrap2">
-        <ul class="navig2">
-            <li><a href="">Кнопка</a></li>
-            <li><a href="">Кнопка</a></li>
-            <li><a href="">Кнопка</a></li>
-            <li><a href="../static/books.html">Книги</a></li>
-            <li><a href="">Журналы</a></li>
-            <li><a href="">Газеты</a></li>
-        </ul>
-    </div>
+<div class="header">
+    <header>
+        <div class="wrap1">
+            <a href="" class="logo">
+                <img src="../static/img/page-logo.svg" alt="Логотип"/>
+            </a>
 
-</header>
+            <ul class="links">
+                <li><a href=""> <img src="../static/img/icon-vk.svg" alt="Логотип"/> </a></li>
+                <li><a href=""> <img src="../static/img/icon-youtube.svg" alt="Логотип"/> </a></li>
+                <li><a href=""> <img src="../static/img/icon-telegram.svg" alt="Логотип"/> </a></li>
+            </ul>
 
-<main>
+            <ul class="navig">
+                <li><a href="">Вход</a></li>
+                <li class="register"><a href="">Регистрация</a></li>
+            </ul>
+        </div>
+        <div class="wrap2">
+            <ul class="navig2">
+                <li><a href="">Кнопка</a></li>
+                <li><a href="">Кнопка</a></li>
+                <li><a href="">Кнопка</a></li>
+                <li><a href="../static/books.html">Книги</a></li>
+                <li><a href="">Журналы</a></li>
+                <li><a href="">Газеты</a></li>
+            </ul>
+        </div>
+    </header>
+</div>
 
-    <div id="news" class="news">
-        <div class="container">
-            <h2>Новости</h2>
-            <div class="underline"></div>
+
+<div class="center">
+    <main>
+
+        <div id="news" class="news">
             <div class="container">
-                <ul class="news-content" id="all-projects">
-                    <li class="news-item news-item-active"><img src="../static/img/news1.png" alt="news"></li>
-                    <li class="news-item"><img src="../static/img/news2.png" alt="news"></li>
-                    <li class="news-item"><img src="../static/img/news3.png" alt="news"></li>
-                    <li class="news-item"><img src="../static/img/news4.png" alt="news"></li>
-                    <li class="news-item"><img src="../static/img/news5.png" alt="news"></li>
-                    <li class="news-item"><img src="../static/img/news6.png" alt="news"></li>
-                    <li><a href="#" class="news-btn prev" id="arrow-left"></a></li>
-                    <li><a href="#" class="news-btn next" id="arrow-right"></a></li>
-                    <li class="news-dots">
-                    </li>
-                </ul>
+                <h2>Новости</h2>
+                <div class="underline"></div>
+                <div class="container">
+                    <ul class="news-content" id="all-projects">
+                        <li class="news-item news-item-active"><img src="../static/img/news1.png" alt="news"></li>
+                        <li class="news-item"><img src="../static/img/news2.png" alt="news"></li>
+                        <li class="news-item"><img src="../static/img/news3.png" alt="news"></li>
+                        <li class="news-item"><img src="../static/img/news4.png" alt="news"></li>
+                        <li class="news-item"><img src="../static/img/news5.png" alt="news"></li>
+                        <li class="news-item"><img src="../static/img/news6.png" alt="news"></li>
+                        <li><a href="#" class="news-btn prev" id="arrow-left"></a></li>
+                        <li><a href="#" class="news-btn next" id="arrow-right"></a></li>
+                        <li class="news-dots">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-</main>
+    </main>
 
-<footer>
-    <div class="container">
-        <div class="footer_wrapper">
-            <p>
-                Copyright
-            </p>
-            <div class="footer_contact">
-                <a href="">
-                    <img src="../static/img/VK.svg" alt="VK">
-                </a>
+    <footer>
+        <div class="container">
+            <div class="footer_wrapper">
+                <p>
+                    Copyright
+                </p>
+                <div class="footer_contact">
+                    <a href="">
+                        <img src="../static/img/VK.svg" alt="VK">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+</div>
 <script src="../static/js/script.js"></script>
 </body>
 </html>
