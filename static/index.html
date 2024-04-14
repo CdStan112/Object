@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=93caf90c-1245-4d7f-9e51-f04e4f881422-ключ&lang=ru_RU" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=93caf90c-1245-4d7f-9e51-f04e4f881422-ключ&lang=ru_RU"
+            type="text/javascript">
     </script>
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/style.css">
 
     <script type="text/javascript">
         ymaps.ready(init);
-        function init(){
+
+        function init() {
             var myMap = new ymaps.Map("map", {
                 center: [55.76, 37.64],
                 zoom: 7
@@ -74,7 +76,8 @@
                 </br>
                 <ul class="li-margin">
                     <li>г.Тула, Центральный
-                        переулок,18</li>
+                        переулок,18
+                    </li>
                     </br>
                     <li>+7(4872)77-02-07</li>
                     <li class="gray">info@oktavaklaster.ru</li>
@@ -83,12 +86,11 @@
                     <li>ежедневно с 12:00 до 21:00</li>
                     </br>
                     <li>Пункт приёма вторсырья во дворе кластера
-                    (рядом с Павильоном):</li>
+                        (рядом с Павильоном):
+                    </li>
                     <li>среда:19:00-20:00</li>
                     <li>воскресенье:12:00-13:00</li>
                     </br>
-                    <li>Правило съёмок</li>
-
                 </ul>
             </div>
             <div id="map" class="map"></div>
