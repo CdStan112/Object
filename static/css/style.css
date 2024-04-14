@@ -224,8 +224,45 @@ body h2 {
     transform: scale(1.2);
 }
 
+/*Футер--------------------------------------------*/
+
 .footer-wrapper {
-    background-color: #222222;
+
+    background-color: black;
+    padding: 50px 0px;
+}
+
+footer {
+    width: 1500px;
+    margin: auto;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    display: flex;
+    color: white;
+}
+
+.footer_contact {
+    text-align: start;
+    font-size: 20px;
+    font-weight: normal;
+    width: 20%;
+
+}
+
+h5 {
+    margin: auto;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.li-margin li {
+    margin-bottom: 5px;
+}
+
+#map {
+    width: 900px;
+    height: 450px;
 }
 
 /*Категории*/
