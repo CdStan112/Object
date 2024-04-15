@@ -16,7 +16,7 @@ body {
     text-align: center;
     font-size: 18px;
     margin: 0;
-    background: #f5f5f5;
+
 }
 
 .header-wrapper1 {
@@ -29,6 +29,7 @@ body {
 }
 
 .header-wrapper2 {
+    background: #f5f5f5;
     border-bottom: 1px solid #e6e6e6;
 }
 
@@ -118,10 +119,33 @@ ul {
     margin-right: 5px;
 }
 
-main {
+.content-wrapper-color1 {
+
+}
+
+.content-wrapper-color-gray {
+    background: #f5f5f5;
+}
+
+.content-wrapper-color-white {
+    background: #ffffff;
+}
+
+.content-wrapper1 {
     width: 1500px;
     margin: auto;
 }
+
+.content-wrapper2 {
+    width: 1500px;
+    margin: auto;
+}
+
+
+/*main {
+    width: 1500px;
+    margin: auto;
+}*/
 
 /*Карусель*/
 
@@ -374,8 +398,12 @@ h5 {
 
 /*Current book------------------------------------------------------------------------*/
 
-.book-info-current-book{
+
+.book-info-current-book {
     display: flex;
+
+    background: #f5f5f5;
+
 }
 
 .book-img-current-book {
@@ -391,12 +419,12 @@ h5 {
     display: flex;
 }
 
-.book-info-current-book-category{
+.book-info-current-book-category {
     display: flex;
     gap: 20px;
 }
 
-.book-info-current-book-category label{
+.book-info-current-book-category label {
 
 
     background: #E1E1F4;
@@ -406,7 +434,7 @@ h5 {
     font-size: 20px;
 }
 
-.book-info-current-book-name{
+.book-info-current-book-name {
 
     display: flex;
     font-weight: normal;
@@ -415,44 +443,104 @@ h5 {
 
 }
 
-.book-info-current-book-name p{
-margin: 15px 0 0 0;
+.book-info-current-book-name p {
+    margin: 15px 0 0 0;
 }
 
-.book-info-current-book-author{
+.book-info-current-book-author {
     display: flex;
     font-weight: normal;
     align-items: start;
 }
 
-.book-info-current-book-author p{
-margin: 15px 0 0 0;
+.book-info-current-book-author p {
+    margin: 15px 0 0 0;
 }
 
 /*Таблица*/
 
-.table-current-book{
-    border-spacing:0px;
+.book-info-current-book-characteristics-text {
+    margin: 20px 0px;
+}
+
+.table-current-book {
+    border-spacing: 0px;
     margin: 0;
     padding: 0;
     text-align: start;
 }
-.first-column{
-    max-width: 200px;
+
+.table-current-book td {
+    padding-bottom: 10px;
+    margin: 0;
+
 }
 
-.book-info-current-book-characteristics-about{
+
+.first-column {
+    max-width: 200px;
+
+}
+
+.second-column {
+    max-width: 200px;
+
+}
+
+.book-info-current-book-characteristics-about {
     display: flex;
 }
 
-.book-info-current-book-characteristics{
+.book-info-current-book-characteristics {
     display: flex;
     flex-direction: column;
     align-items: start;
 
 }
 
+.book-info-current-book-about {
+    margin-left: 150px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.book-info-current-book-about-text {
+    text-align: start;
+    margin: 20px 0px;
+    padding: 0;
+}
+
+.book-info-current-book-about-long-text {
+    text-align: start;
+    margin: 0;
+    padding: 0;
+}
+
+/* Похожие */
+
+.same{
+    font-size: 30px;
+    font-weight: normal;
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
 
 
+
+
+
+.slider2{
+    display: flex;
+    flex-direction: row;
+}
+
+.slider-element2{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
 
 
