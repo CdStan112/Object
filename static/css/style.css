@@ -19,6 +19,10 @@ body {
 
 }
 
+svg {
+    pointer-events: none;
+}
+
 .header-wrapper1 {
     background: #ffffff;
 }
@@ -143,8 +147,7 @@ ul {
 
 
 main {
-
-
+    margin: 0 0 auto 0;
 }
 
 /*Карусель*/
