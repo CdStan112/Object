@@ -14,9 +14,30 @@
 
         function init() {
             var myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 7
+                center: [54.191136, 37.612173],
+                zoom: 14,
+                controls: ['zoomControl', 'typeSelector']
             });
+
+            let mainLocLayout = ymaps.templateLayoutFactory.createClass([
+                '<svg width="32" height="32" style="position: absolute; top: -16px; left: -16px;">',
+                '<use xlink:href="../static/img/sprite.svg#icon-map-balloon"/>',
+                '</svg>'
+            ].join(''));
+
+            let landmarkLocLayout = ymaps.templateLayoutFactory.createClass([
+                '<svg width="24" height="24" style="position: absolute; top: -12px; left: -12px;">',
+                '<use xlink:href="../static/img/sprite.svg#icon-map-balloon-landmark"/>',
+                '</svg>'
+            ].join(''));
+
+            var $mainLocation = myMap.geoObjects.add(new ymaps.Placemark([54.191136, 37.612173], {}, {
+                iconLayout: mainLocLayout,
+            }));
+
+            var $landmarkLocation = myMap.geoObjects.add(new ymaps.Placemark([54.195138, 37.620352], {}, {
+                iconLayout: landmarkLocLayout,
+            }));
         }
     </script>
 
@@ -25,7 +46,9 @@
 <div class="header-wrapper1">
     <header class="header1">
         <a href="" class="logo">
-            <img src="../static/img/page-logo.svg" alt="Логотип"/>
+            <svg viewBox="0 0 232 56" width="232" height="56">
+                <use xlink:href="/static/img/sprite.svg#page-logo"></use>
+            </svg>
         </a>
         <ul class="links">
             <li><a href="">
