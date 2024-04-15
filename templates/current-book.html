@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=93caf90c-1245-4d7f-9e51-f04e4f881422-ключ&lang=ru_RU" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=93caf90c-1245-4d7f-9e51-f04e4f881422-ключ&lang=ru_RU"
+            type="text/javascript">
     </script>
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/style.css">
 
     <script type="text/javascript">
         ymaps.ready(init);
-        function init(){
+
+        function init() {
             var myMap = new ymaps.Map("map", {
                 center: [55.76, 37.64],
                 zoom: 7
@@ -49,48 +51,101 @@
     </header>
 </div>
 
-<div class="center-current-book">
-    <main>
-        <div class="book-info">
-            <div class="book-img">
-            <img src="../static/img/book-info.png" alt="news">
+<main>
+    <div class="book-info-current-book">
+        <div class="book-img-current-book">
+            <img src="../static/img/book-info.pngn" alt="news">
+        </div>
+
+        <div class="book-info-current-book-category-name-author">
+
+            <div class="book-info-current-book-category">
+                <label>category1</label>
+                <label>category2</label>
+                <label>category3</label>
             </div>
 
-             <div class="book-info-tag">
-
+            <div class="book-info-current-book-name">
+                <p>Название книги</p>
             </div>
 
+            <div class="book-info-current-book-author">
+                <p>Автор</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-info-current-book-characteristics-about">
+
+        <div class="book-info-current-book-characteristics">
+
+            </p>Характеристики<p>
+
+            <table class="table-current-book">
+                <tr>
+                    <td class="first-column">ХИздательство</td>
+                    <td class="second-column">ИздательствоJS</td>
+                </tr>
+                <tr>
+                    <td class="first-column">Год издания</td>
+                    <td class="second-column">1999</td>
+                </tr>
+                <tr>
+                    <td class="first-column">Возрастные ограничения</td>
+                    <td class="second-column">18+</td>
+                </tr>
+                <tr>
+                    <td class="first-column">Критерий</td>
+                    <td class="second-column">КритерийJS</td>
+                </tr>
+                <tr>
+                    <td class="first-column">Критерий</td>
+                    <td class="second-column">КритерийJS</td>
+                </tr>
+            </table>
+
+
+            </ul>
 
         </div>
-    </main>
 
-    <div class="footer-wrapper">
-        <footer>
-            <div class="footer_contact">
-                <h5>Кластер "Октава"</h5>
-                </br>
-                <ul class="li-margin">
-                    <li>г.Тула, Центральный
-                        переулок,18</li>
-                    </br>
-                    <li>+7(4872)77-02-07</li>
-                    <li class="gray">info@oktavaklaster.ru</li>
-                    </br>
-                    <li>Время работы:</li>
-                    <li>ежедневно с 12:00 до 21:00</li>
-                    </br>
-                    <li>Пункт приёма вторсырья во дворе кластера
-                    (рядом с Павильоном):</li>
-                    <li>среда:19:00-20:00</li>
-                    <li>воскресенье:12:00-13:00</li>
-                    </br>
-                    <li>Правило съёмок</li>
+        <div>
 
-                </ul>
-            </div>
-            <div id="map" class="map"></div>
-        </footer>
+        </div>
+
     </div>
+</main>
+
+
+<div class="footer-wrapper">
+    <footer>
+        <div class="footer_contact">
+            <h5>Кластер "Октава"</h5>
+            </br>
+            <ul class="li-margin">
+                <li>г.Тула, Центральный
+                    переулок,18
+                </li>
+                </br>
+                <li>+7(4872)77-02-07</li>
+                <li class="gray">info@oktavaklaster.ru</li>
+                </br>
+                <li>Время работы:</li>
+                <li>ежедневно с 12:00 до 21:00</li>
+                </br>
+                <li>Пункт приёма вторсырья во дворе кластера
+                    (рядом с Павильоном):
+                </li>
+                <li>среда:19:00-20:00</li>
+                <li>воскресенье:12:00-13:00</li>
+                </br>
+                <li>Правило съёмок</li>
+
+            </ul>
+        </div>
+        <div id="map" class="map"></div>
+    </footer>
+</div>
 </div>
 <script src="../static/js/script.js"></script>
 </body>

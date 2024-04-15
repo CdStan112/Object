@@ -371,3 +371,88 @@ h5 {
     -webkit-appearance: none;
     -moz-animation: none;
 }
+
+/*Current book------------------------------------------------------------------------*/
+
+.book-info-current-book{
+    display: flex;
+}
+
+.book-img-current-book {
+    width: 260px;
+    height: 305px;
+    background: #E33000;
+}
+
+.book-info-current-book-category-name-author {
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 100px;
+    display: flex;
+}
+
+.book-info-current-book-category{
+    display: flex;
+    gap: 20px;
+}
+
+.book-info-current-book-category label{
+
+
+    background: #E1E1F4;
+    border-radius: 2em;
+    padding: 5px 15px;
+    color: #2D2DB4;
+    font-size: 20px;
+}
+
+.book-info-current-book-name{
+
+    display: flex;
+    font-weight: normal;
+    align-items: start;
+    font-size: 30px;
+
+}
+
+.book-info-current-book-name p{
+margin: 15px 0 0 0;
+}
+
+.book-info-current-book-author{
+    display: flex;
+    font-weight: normal;
+    align-items: start;
+}
+
+.book-info-current-book-author p{
+margin: 15px 0 0 0;
+}
+
+/*Таблица*/
+
+.table-current-book{
+    border-spacing:0px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+.first-column{
+    max-width: 200px;
+}
+
+.book-info-current-book-characteristics-about{
+    display: flex;
+}
+
+.book-info-current-book-characteristics{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+
+
+
+
