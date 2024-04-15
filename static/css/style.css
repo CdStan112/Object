@@ -142,10 +142,10 @@ ul {
 }
 
 
-/*main {
-    width: 1500px;
-    margin: auto;
-}*/
+main {
+
+
+}
 
 /*Карусель*/
 
@@ -529,9 +529,6 @@ h5 {
 }
 
 
-
-
-
 .slider2{
     display: flex;
     flex-direction: row;
@@ -541,6 +538,43 @@ h5 {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+}
+
+.push-buttons{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 1500px;
+
+    justify-content: space-between;
+
+
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    z-index: 1;
+}
+
+.push-buttons button{
+    cursor: pointer;
+    top: 50%;
+    z-index: 5;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    z-index: 1;
+}
+
+.companies-hor-item{
+
+}
+.companies-hor-item img{
+
+    max-width: 375px;
+    max-height: 200px;
 }
 
 
