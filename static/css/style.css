@@ -8,6 +8,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Stratos LC", -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
     text-align: center;
@@ -113,12 +116,6 @@ ul {
 .navig li {
     margin-left: 5px;
     margin-right: 5px;
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 main {
