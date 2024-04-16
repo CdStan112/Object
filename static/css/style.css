@@ -16,7 +16,6 @@ body {
     text-align: center;
     font-size: 18px;
     margin: 0;
-
 }
 
 svg {
@@ -522,7 +521,7 @@ h5 {
 
 /* Похожие */
 
-.same{
+.same {
     font-size: 30px;
     font-weight: normal;
     display: flex;
@@ -532,18 +531,18 @@ h5 {
 }
 
 
-.slider2{
+.slider2 {
     display: flex;
     flex-direction: row;
 }
 
-.slider-element2{
+.slider-element2 {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
 }
 
-.push-buttons{
+.push-buttons {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
@@ -558,7 +557,7 @@ h5 {
     z-index: 1;
 }
 
-.push-buttons button{
+.push-buttons button {
     cursor: pointer;
     top: 50%;
     z-index: 5;
@@ -571,10 +570,11 @@ h5 {
     z-index: 1;
 }
 
-.companies-hor-item{
+.companies-hor-item {
 
 }
-.companies-hor-item img{
+
+.companies-hor-item img {
 
     max-width: 375px;
     max-height: 200px;

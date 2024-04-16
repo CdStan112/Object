@@ -51,37 +51,12 @@ def get_categories():
     return jsonify({category.id: category.name for category in BookCategory.query.all()})
 
 
-@app.route('/add_book', methods=['GET'])
+@app.route('/current-book', methods=['GET'])
 def add_book_page():
-    return render_template('add_book.html')
+    context = {}
+    context['mytext'] = random.random()
 
-
-@app.route('/add_book', methods=['POST'])
-def add_book_request():
-    db.session.add(Book(title=request.json['title'],
-                        author=request.json['author'],
-                        info=request.json['info'],
-                        photo_id=request.json['photo_id']))
-    db.session.commit()
-    return Response(status=200)
-
-
-@app.route('/data', methods=['POST'])
-def data():
-    if request.json['category'] is None:
-        return Response(status=500)
-    _books = BookCategory.query.get(request.json['category']).books
-
-    books_list = []
-    for _book in _books:
-        books_list.append({
-            'id': _book.id,
-            'title': _book.title,
-            'author': _book.author,
-            'info': _book.info
-            # Add more attributes as needed
-        })
-    return jsonify(books=books_list)
+    return render_template('current-book.html', context=context)
 
 
 with app.app_context():
