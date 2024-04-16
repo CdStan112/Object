@@ -8,6 +8,39 @@
     </script>
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/style.css">
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [54.191136, 37.612173],
+                zoom: 14,
+                controls: ['zoomControl', 'typeSelector']
+            });
+
+            let mainLocLayout = ymaps.templateLayoutFactory.createClass([
+                '<svg width="32" height="32" style="position: absolute; top: -16px; left: -16px;">',
+                '<use xlink:href="../static/img/sprite.svg#icon-map-balloon"/>',
+                '</svg>'
+            ].join(''));
+
+            let landmarkLocLayout = ymaps.templateLayoutFactory.createClass([
+                '<svg width="24" height="24" style="position: absolute; top: -12px; left: -12px;">',
+                '<use xlink:href="../static/img/sprite.svg#icon-map-balloon-landmark"/>',
+                '</svg>'
+            ].join(''));
+
+            var $mainLocation = myMap.geoObjects.add(new ymaps.Placemark([54.191136, 37.612173], {}, {
+                iconLayout: mainLocLayout,
+            }));
+
+            var $landmarkLocation = myMap.geoObjects.add(new ymaps.Placemark([54.195138, 37.620352], {}, {
+                iconLayout: landmarkLocLayout,
+            }));
+        }
+    </script>
+
 </head>
 <body>
 <div class="header-wrapper1">
@@ -57,6 +90,7 @@
 
 <main>
     <div class="content-wrapper-color-gray">
+
         <div class="content-wrapper1">
             <div class="book-info-current-book">
                 <div class="book-img-current-book">
@@ -123,25 +157,13 @@
                 <div class="container-current-book">
                     <div class="similar-wrapper">
                         <div class="push-buttons"></div>
-                        <!--          <button class="glo-slider__prev">
-                                      <svg viewBox="0 0 960 960" height="24" width="24">
-                                          <use xlink:href="../static/img/sprite.svg#icon-service-arrow-left"></use>
-                                      </svg>
-                                  </button>
-                                  <button class="glo-slider__next">
-                                      <svg viewBox="0 0 960 960" height="24" width="24">
-                                          <use xlink:href="../static/img/sprite.svg#icon-service-arrow-right"></use>
-                                      </svg>
-                                  </button>
-          -->
                         <div class="similar-horiz">
                             <div class="similar-horiz-item">
                                 <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/news2.png"
-                                                                                   alt="1"></li>
+                                    <li class="similar-horiz-item-img-border">
+                                        <img src="../static/img/news2.png" alt="1"></li>
                                     <li class="similar-horiz-item-name">Название</li>
                                     <li class="similar-horiz-item-author">Автор</li>
-
                                 </ul>
 
                             </div>
@@ -201,6 +223,8 @@
     </div>
 
 
+
+
 </main>
 
 
@@ -208,24 +232,24 @@
     <footer>
         <div class="footer_contact">
             <h5>Кластер "Октава"</h5>
-            </br>
+            <br/>
             <ul class="li-margin">
                 <li>г.Тула, Центральный
                     переулок,18
                 </li>
-                </br>
+                <br/>
                 <li>+7(4872)77-02-07</li>
                 <li class="gray">info@oktavaklaster.ru</li>
-                </br>
+                <br/>
                 <li>Время работы:</li>
                 <li>ежедневно с 12:00 до 21:00</li>
-                </br>
+                <br/>
                 <li>Пункт приёма вторсырья во дворе кластера
                     (рядом с Павильоном):
                 </li>
                 <li>среда:19:00-20:00</li>
                 <li>воскресенье:12:00-13:00</li>
-                </br>
+                <br/>
                 <li>Правило съёмок</li>
 
             </ul>

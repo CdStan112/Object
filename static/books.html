@@ -1,75 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=93caf90c-1245-4d7f-9e51-f04e4f881422-ключ&lang=ru_RU"
+            type="text/javascript">
+    </script>
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/style.css">
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [54.191136, 37.612173],
+                zoom: 14,
+                controls: ['zoomControl', 'typeSelector']
+            });
+
+            let mainLocLayout = ymaps.templateLayoutFactory.createClass([
+                '<svg width="32" height="32" style="position: absolute; top: -16px; left: -16px;">',
+                '<use xlink:href="../static/img/sprite.svg#icon-map-balloon"/>',
+                '</svg>'
+            ].join(''));
+
+            let landmarkLocLayout = ymaps.templateLayoutFactory.createClass([
+                '<svg width="24" height="24" style="position: absolute; top: -12px; left: -12px;">',
+                '<use xlink:href="../static/img/sprite.svg#icon-map-balloon-landmark"/>',
+                '</svg>'
+            ].join(''));
+
+            var $mainLocation = myMap.geoObjects.add(new ymaps.Placemark([54.191136, 37.612173], {}, {
+                iconLayout: mainLocLayout,
+            }));
+
+            var $landmarkLocation = myMap.geoObjects.add(new ymaps.Placemark([54.195138, 37.620352], {}, {
+                iconLayout: landmarkLocLayout,
+            }));
+        }
+    </script>
+
 </head>
 <body>
-<header>
-    <div class="wrap1">
-        <a class="logo" href="/">
-            <img src="" alt="Логотип"/>
+<div class="header-wrapper1">
+    <header class="header1">
+        <a href="" class="logo">
+            <svg viewBox="0 0 232 56" width="232" height="56">
+                <use xlink:href="/static/img/sprite.svg#page-logo"></use>
+            </svg>
         </a>
-        <ul class="navig">
-            <li><a href="">Вход</a></li>
-            <li><a href="">Регистрация</a></li>
+        <ul class="links">
+            <li><a href="">
+                <svg viewBox="0 0 18 11" width="18" height="11">
+                    <use xlink:href="/static/img/sprite.svg#icon-social-vk"></use>
+                </svg>
+            </a></li>
+            <li><a href="">
+                <svg viewBox="0 0 18 13" width="18" height="13">
+                    <use xlink:href="/static/img/sprite.svg#icon-social-yt"></use>
+                </svg>
+            </a></li>
+            <li><a href="">
+                <svg viewBox="0 0 19 16" width="19" height="16">
+                    <use xlink:href="/static/img/sprite.svg#icon-social-tg"></use>
+                </svg>
+            </a></li>
         </ul>
-    </div>
-    <div class="wrap2">
+        <ul class="navig">
+            <li class="login"><a href="../static/register.html">Вход</a></li>
+            <li class="register"><a href="">Регистрация</a></li>
+        </ul>
+    </header>
+    </header>
+</div>
+
+
+<div class="header-wrapper2">
+    <header class="header2">
         <ul class="navig2">
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
-            <li><a href="">Книги</a></li>
+            <li><a href="../static/books.html">Книги</a></li>
             <li><a href="">Журналы</a></li>
             <li><a href="">Газеты</a></li>
         </ul>
-    </div>
-</header>
+    </header>
+</div>
+
+
 <main class="main">
-    <div class="forms">
-        <form id="form">
-            <h1>Категории</h1>
-            <div id="check">
-            </div>
-            <input type="submit" value="Применить">
-        </form>
-    </div>
+    <div class="content-wrapper-color-white">
+        <div class="content-wrapper2">
+
+            <div class="content-total">
+
+                <div class="forms">
+                    <form id="form">
+                        <ul class="genre-block">
+                            <li class="genre">Жанр</li>
+                            <li class="category-genre" id="category1"><input class="category-genre-checkbox"
+                                                                             type="checkbox"/>Категория 1
+                            </li>
+                            <li class="category-genre" id="category2"><input type="checkbox"/>Категория 1</li>
+                            <!--<div id="check"></div>-->
+                        </ul>
+                    </form>
+                </div>
 
 
-    <div class="bodyDiv">
-        <form action="" id="form2">
-            <label>
-                Поиск
-                <input type="text" id="text">
-                <button class="button-find" id="find"></button>
-            </label>
+                <div class="bodyDiv">
+                    <form action="" id="form2" class="input-find-book-name">
+                        <p>
+                            <input class="input-text-book-name" id="text-cat" placeholder="Название книги" type="text"/>
+                        </p>
+                        <p class="button-find-book-name">
+                            <input type="submit" value="Поиск" class="button-find-book-name" id="find"/>
+                        </p>
+                    </form>
+                        <br/> <br/>
 
-            <br/><br/>
-            <label class="book">
-                Книги
-            </label>
-            <br/> <br/>
-            <div id="books">
-                <div class="one-book">
-                    <div class="book-img">
-                        <img src="../static/img/example1.jpg" alt="kcac" class="book-img-func">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-info-func"> Text Text Text Text Text Text Text Text </p>
-                    </div>
+                        <div class="books-by-category">
+                            <div class="books-by-category-item">
+                                <ul class="all3thingsAgain">
+                                    <li class="books-by-category-item-img-border">
+                                        <img src="../static/img/color-attack.png" alt="1"></li>
+                                    <li class="books-by-category-item-name">Название</li>
+                                    <li class="books-by-category-item-author">Автор</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                    <br/>
+                    <br/>
+                    <p id="p1"></p>
+                    <p id="p2"></p>
+                    <p id="p3"></p>
                 </div>
             </div>
-        </form>
-        <br/>
-        <br/>
-        <p id="p1"></p>
-        <p id="p2"></p>
-        <p id="p3"></p>
+        </div>
     </div>
 </main>
-<script src="../static/js/books.js"></script>
+<div class="footer-wrapper">
+    <footer>
+        <div class="footer_contact">
+            <h5>Кластер "Октава"</h5>
+            <br/>
+            <ul class="li-margin">
+                <li>г.Тула, Центральный
+                    переулок,18
+                </li>
+                <br/>
+                <li>+7(4872)77-02-07</li>
+                <li class="gray">info@oktavaklaster.ru</li>
+                <br/>
+                <li>Время работы:</li>
+                <li>ежедневно с 12:00 до 21:00</li>
+                <br/>
+                <li>Пункт приёма вторсырья во дворе кластера
+                    (рядом с Павильоном):
+                </li>
+                <li>среда:19:00-20:00</li>
+                <li>воскресенье:12:00-13:00</li>
+                <br/>
+                <li>Правило съёмок</li>
+
+            </ul>
+        </div>
+        <div id="map" class="map"></div>
+    </footer>
+</div>
+</div>
+<script src="../static/js/script.js"></script>
+<script src="../static/js/slider2.js"></script>
 </body>
 </html>
