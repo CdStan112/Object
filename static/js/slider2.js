@@ -187,3 +187,4 @@ const slider2 = () => {
     init();
 }
 slider2();
+
