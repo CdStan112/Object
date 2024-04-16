@@ -45,7 +45,7 @@
 <div class="header-wrapper2">
     <header class="header2">
         <ul class="navig2">
-            <li><a href="">{{ context.mytext }}</a></li>
+            <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
             <li><a href="../static/books.html">Книги</a></li>
@@ -60,23 +60,23 @@
         <div class="content-wrapper1">
             <div class="book-info-current-book">
                 <div class="book-img-current-book">
-                    <img src="../static/img/book-info.pngn" alt="news">
+                    <img src="{{ book.photo }}" alt="photo">
                 </div>
 
                 <div class="book-info-current-book-category-name-author">
 
                     <div class="book-info-current-book-category">
-                        <label>category1</label>
-                        <label>category2</label>
-                        <label>category3</label>
+                        {% for cat in book.categories %}
+                            <label>{{ cat }}</label>
+                        {% endfor %}
                     </div>
 
                     <div class="book-info-current-book-name">
-                        <p>Название книги</p>
+                        <p>{{ book.title }}</p>
                     </div>
 
                     <div class="book-info-current-book-author">
-                        <p>Автор</p>
+                        <p>{{ book.autor }}</p>
                     </div>
                 </div>
             </div>
@@ -90,38 +90,26 @@
 
                 <div class="book-info-current-book-characteristics">
 
-                    <p class="book-info-current-book-characteristics-text">Характеристики</p>
+                    <p class="book-info-current-book-characteristics-text">Информация</p>
 
                     <table class="table-current-book">
                         <tr>
-                            <td class="first-column">ХИздательство</td>
-                            <td class="second-column">ИздательствоJS</td>
+                            <td class="first-column">Издательство</td>
+                            <td class="second-column">{{ book.publisher }}</td>
                         </tr>
                         <tr>
                             <td class="first-column">Год издания</td>
-                            <td class="second-column">1999</td>
+                            <td class="second-column">{{ book.date_of_pub }}</td>
                         </tr>
                         <tr>
                             <td class="first-column">Возрастные ограничения</td>
-                            <td class="second-column">18+</td>
-                        </tr>
-                        <tr>
-                            <td class="first-column">Критерий</td>
-                            <td class="second-column">КритерийJS</td>
-                        </tr>
-                        <tr>
-                            <td class="first-column">Критерий</td>
-                            <td class="second-column">КритерийJS</td>
+                            <td class="second-column">{{ book.age_restrictions }}</td>
                         </tr>
                     </table>
-
                 </div>
-
                 <div class="book-info-current-book-about">
                     <p class="book-info-current-book-about-text">Описание</p>
-                    <p class="book-info-current-book-about-long-text">Большое описание описание описание описание
-                        описание
-                        описание описание описание описание описание описание описание описание</p>
+                    <p class="book-info-current-book-about-long-text">{{ book.description }}</p>
                 </div>
 
             </div>

@@ -1,7 +1,7 @@
 import random
 import string
 
-from flask import Flask, Response, jsonify, request, send_from_directory, render_template
+from flask import Flask, Response, jsonify, request, send_from_directory, render_template, redirect
 from flask_bcrypt import Bcrypt
 from sqlalchemy import func
 
@@ -53,10 +53,23 @@ def get_categories():
 
 @app.route('/current-book', methods=['GET'])
 def add_book_page():
-    context = {}
-    context['mytext'] = random.random()
+    book_id = request.args['id']
+    if book_id is None:
+        return redirect(location='books')
+    selected_book = Book.query.get(book_id)
 
-    return render_template('current-book.html', context=context)
+    book_data = {
+        'title': selected_book.title,
+        'autor': selected_book.author,
+        'publisher': '',
+        'date_of_pub': '',
+        'age_restrictions': '',
+        'description': selected_book.info,
+        'photo': selected_book.photo.uri,
+        'categories':  [category.name for category in selected_book.categories]
+    }
+
+    return render_template('current-book.html', book=book_data)
 
 
 with app.app_context():

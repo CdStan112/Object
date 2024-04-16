@@ -8,7 +8,7 @@
 }
 
 body {
-     overflow-x: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -412,7 +412,12 @@ h5 {
 .book-img-current-book {
     width: 260px;
     height: 305px;
-    background: #E33000;
+}
+
+.book-img-current-book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .book-info-current-book-category-name-author {
@@ -624,40 +629,42 @@ h5 {
 
 /*Окно регистрации ------------------------------------------------------------------------------*/
 
-.wrapper-reg ::-webkit-input-placeholder  {
+.wrapper-reg ::-webkit-input-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
 
-.wrapper-reg input:-moz-placeholder{
+.wrapper-reg input:-moz-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
+
 .wrapper-reg input {
-  outline: none;
+    outline: none;
     margin-left: 10px;
     margin-right: 10px;
     align-items: center;
 
 }
 
-.register-window{
+.register-window {
     margin: 30px auto auto auto;
     width: 350px;
 }
-.wrapper-reg{
+
+.wrapper-reg {
     text-align: start;
 }
 
-.register-form{
+.register-form {
 
-     display: flex;
+    display: flex;
     flex-direction: column;
 
 }
 
-.register-form p{
-margin: 10px 0;
+.register-form p {
+    margin: 10px 0;
 }
 
 /**** advanced input styling ****/
@@ -682,80 +689,82 @@ input {
 */
 
 
-.wrapper-reg input:not([type="checkbox"]){
+.wrapper-reg input:not([type="checkbox"]) {
     width: 82%;
     margin-top: 4px;
     padding: 10px 5px 10px 32px;
     border: 1px solid rgb(170, 170, 170);
-    box-sizing : content-box;
+    box-sizing: content-box;
     border-radius: 3px;
     transition: all 0.2s linear;
 }
 
-.signin-button input:not([type="checkbox"]){
+.signin-button input:not([type="checkbox"]) {
     width: 77%;
     margin-top: 4px;
     margin-left: 30px;
     padding: 10px 5px 10px 10px;
     border: 1px solid rgb(253, 149, 1);
-    box-sizing : content-box;
+    box-sizing: content-box;
     font-size: 20px;
     color: orange;
     border-radius: 3px;
     transition: all 0.2s linear;
 }
+
 .signin-button input:not([type="checkbox"]):active,
-.signin-button input:not([type="checkbox"]):focus{
+.signin-button input:not([type="checkbox"]):focus {
     border: 1px solid rgb(253, 149, 1);
     background: rgb(253, 149, 1);
     color: white;
 }
 
 
-
-.logo-at-window{
-    margin-bottom: 20px ;
+.logo-at-window {
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
 /* Окно входа -------------------------------------------------------------------------------*/
 
-.login-window{
+.login-window {
     margin: 30px auto auto auto;
     width: 350px;
 
 }
-.wrapper-log{
+
+.wrapper-log {
     text-align: start;
 }
 
-.login-form{
+.login-form {
 
-     display: flex;
+    display: flex;
     flex-direction: column;
 
 }
 
-.login-form p{
-margin: 10px 0;
+.login-form p {
+    margin: 10px 0;
 }
 
 /**** advanced input styling ****/
 /* placeholder */
 
 
-.wrapper-log ::-webkit-input-placeholder  {
+.wrapper-log ::-webkit-input-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
 
-.wrapper-log input:-moz-placeholder{
+.wrapper-log input:-moz-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
+
 .wrapper-log input {
-  outline: none;
+    outline: none;
     margin-left: 10px;
     margin-right: 10px;
     align-items: center;
@@ -763,40 +772,39 @@ margin: 10px 0;
 }
 
 
-
-.wrapper-log input:not([type="checkbox"]){
+.wrapper-log input:not([type="checkbox"]) {
     width: 82%;
     margin-top: 4px;
     padding: 10px 5px 10px 32px;
     border: 1px solid rgb(170, 170, 170);
-    box-sizing : content-box;
+    box-sizing: content-box;
     border-radius: 3px;
     transition: all 0.2s linear;
 }
 
-.login-button input:not([type="checkbox"]){
+.login-button input:not([type="checkbox"]) {
     width: 77%;
     margin-top: 4px;
     margin-left: 30px;
     padding: 10px 5px 10px 10px;
     border: 1px solid rgb(253, 149, 1);
-    box-sizing : content-box;
+    box-sizing: content-box;
     font-size: 20px;
     color: orange;
     border-radius: 3px;
     transition: all 0.2s linear;
 }
+
 .login-button input:not([type="checkbox"]):active,
-.login-button input:not([type="checkbox"]):focus{
+.login-button input:not([type="checkbox"]):focus {
     border: 1px solid rgb(253, 149, 1);
     background: rgb(253, 149, 1);
     color: white;
 }
 
 
-
-.logo-at-window{
-    margin-bottom: 20px ;
+.logo-at-window {
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
