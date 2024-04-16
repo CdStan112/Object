@@ -53,9 +53,9 @@ def get_categories():
 
 @app.route('/current-book', methods=['GET'])
 def add_book_page():
-    book_id = request.args['id']
+    book_id = request.args.get('id')
     if book_id is None:
-        return redirect(location='books')
+        return redirect(location='/')
     selected_book = Book.query.get(book_id)
 
     book_data = {
