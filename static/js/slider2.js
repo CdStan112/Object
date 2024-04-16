@@ -1,9 +1,9 @@
 const slider2 = () => {
 
-    const main = document.querySelector('.companies-wrapper'),
+    const main = document.querySelector('.similar-wrapper'),
         forButtons=document.querySelector('.push-buttons'),
-        wrap = document.querySelector('.companies-hor'),
-        slides = document.querySelector('.companies-hor').children;
+        wrap = document.querySelector('.similar-horiz'),
+        slides = document.querySelector('.similar-horiz').children;
     let slidesToShow = 4,
         options = {
             position: 0,
@@ -108,7 +108,7 @@ const slider2 = () => {
         prev.className = 'glo-slider__prev';
                  forButtons.appendChild(prev)
 
-        const svgAddLeft = `<svg viewBox="0 0 960 960" height="24" width="24">
+        const svgAddLeft = `<svg viewBox="0 0 960 960" height="60" width="60">
                     <use xlink:href="../static/img/sprite.svg#icon-service-arrow-left"></use>
                 </svg>`
         prev.innerHTML = svgAddLeft;
@@ -117,7 +117,7 @@ const slider2 = () => {
 
         next.className = 'glo-slider__next';
         forButtons.appendChild(next)
-           const svgAddRight = `<svg viewBox="0 0 960 960" height="24" width="24">
+           const svgAddRight = `<svg viewBox="0 0 960 960" height="60" width="60">
                     <use xlink:href="../static/img/sprite.svg#icon-service-arrow-right"></use>
                 </svg>`
         next.innerHTML = svgAddRight;
@@ -149,10 +149,6 @@ const slider2 = () => {
                 </svg>`
         next.innerHTML = svgAddRight;
     }
-
-
-
-
 
 */
 
