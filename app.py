@@ -57,6 +57,8 @@ def add_book_page():
     if book_id is None:
         return redirect(location='/')
     selected_book = Book.query.get(book_id)
+    if selected_book is None:
+        return redirect(location='/')
 
     book_data = {
         'title': selected_book.title,
@@ -66,7 +68,7 @@ def add_book_page():
         'age_restrictions': '',
         'description': selected_book.info,
         'photo': selected_book.photo.uri,
-        'categories':  [category.name for category in selected_book.categories]
+        'categories': [category.name for category in selected_book.categories]
     }
 
     return render_template('current-book.html', book=book_data)
