@@ -4,7 +4,7 @@ const slider2 = () => {
         forButtons=document.querySelector('.push-buttons'),
         wrap = document.querySelector('.similar-horiz'),
         slides = document.querySelector('.similar-horiz').children;
-    let slidesToShow = 4,
+    let slidesToShow = 5,
         options = {
             position: 0,
             infinity: true,
@@ -62,12 +62,12 @@ const slider2 = () => {
             display:flex !important;
             transition:transform 0.5s !important;
             will-change:transform !important;
+            justify-content: space-between;
         }
         .glo-slider__item{
             display:flex !important;
             align-items:center;
             justify-content:center;
-            flex: 0 0 ${options.widthSlide}% !important; 
             margin: auto 0 !important; 
         }
         `;
