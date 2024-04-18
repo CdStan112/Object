@@ -1223,7 +1223,7 @@ input {
 border: 2px solid green;
 }
 
-#nameRowEdit input[type="text"]:invalid{
+#nameRowEdit input[type="text"]:user-invalid{
 border: 2px solid red;
 }
 
@@ -1233,7 +1233,7 @@ border: 2px solid red;
 border: 2px solid green;
 }
 
-#surnameRowEdit input[type="text"]:invalid {
+#surnameRowEdit input[type="text"]:user-invalid {
 border: 2px solid red;
 }
 
@@ -1242,7 +1242,7 @@ border: 2px solid red;
 border: 2px solid green;
 }
 
-#mailRowEdit input[type="email"]:invalid {
+#mailRowEdit input[type="email"]:user-invalid {
 border: 2px solid red;
 }
 
@@ -1251,7 +1251,7 @@ border: 2px solid red;
 border: 2px solid green;
 }
 
-#numberRowEdit input[type="tel"]:invalid {
+#numberRowEdit input[type="tel"]:user-invalid {
 border: 2px solid red;
 }
 
