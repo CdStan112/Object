@@ -91,12 +91,6 @@ svg {
     align-items: center;
 }
 
-.register {
-    color: #E33000;
-    padding: 5px 20px;
-    border: 1px solid #E33000;
-    border-radius: 100px;
-}
 
 a:visited {
     color: inherit;
@@ -1228,7 +1222,7 @@ input {
 border: 2px solid green;
 }
 
-#nameRowEdit input[type="text"]:invalid{
+#nameRowEdit input[type="text"]:user-invalid{
 border: 2px solid red;
 }
 
@@ -1238,7 +1232,7 @@ border: 2px solid red;
 border: 2px solid green;
 }
 
-#surnameRowEdit input[type="text"]:invalid {
+#surnameRowEdit input[type="text"]:user-invalid {
 border: 2px solid red;
 }
 
@@ -1247,7 +1241,7 @@ border: 2px solid red;
 border: 2px solid green;
 }
 
-#mailRowEdit input[type="email"]:invalid {
+#mailRowEdit input[type="email"]:user-invalid {
 border: 2px solid red;
 }
 
@@ -1256,10 +1250,15 @@ border: 2px solid red;
 border: 2px solid green;
 }
 
-#numberRowEdit input[type="tel"]:invalid {
+#numberRowEdit input[type="tel"]:user-invalid {
 border: 2px solid red;
 }
 
+.editor-user-info-user-profile-password{
+       margin-top: 50px;
+    margin-left: 100px;
+
+}
 
 .category-genre-chekbox {
     display: none;
@@ -1268,6 +1267,17 @@ border: 2px solid red;
 /* Style the label */
 .category-genre label {
     cursor: pointer; /* Change cursor to pointer when hovering over label */
+}
+.editor-user-info-user-profile-password input:not([type="checkbox"]) {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    border: 2px solid rgba(45,45,180 ,0.5);
+    box-sizing: content-box;
+    font-size: 18px;
+    color: rgba(45,45,180 ,0.5);
+    border-radius: 2em;
+    transition: all 0.25s  linear;
 }
 
 /* Style label based on checkbox state */
@@ -1280,7 +1290,34 @@ label:has(.category-genre-chekbox:checked) {
     color: red; /* Change label color when checkbox is checked */
     transition: color 0.2s ease;
 }
+.editor-user-info-user-profile-password input:not([type="checkbox"]):active,
+.editor-user-info-user-profile-password input:not([type="checkbox"]):hover {
+    background: rgba(45,45,180 ,1);
+    color: white;
+}
+
+/*Кнопка регистрации*/
 
 
+.register {
 
+}
 
+.register input:not([type="checkbox"]) {
+    background: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    color: #E33000;
+    border: 2px solid #E33000;
+    box-sizing: content-box;
+    font-size: 18px;
+    border-radius: 2em;
+    transition: all 0.25s linear;
+}
+
+.register input:not([type="checkbox"]):active,
+.register input:not([type="checkbox"]):hover {
+    background: #E33000;
+    color: white;
+}
