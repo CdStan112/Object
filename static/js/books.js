@@ -1,44 +1,33 @@
-function createBookCard(book) {
-    const bookCard = document.createElement('div');
-    bookCard.classList.add('one-book');
+function appendBookItem(bookData) {
+    // Create a new div element for the book item
+    let bookItemDiv = document.createElement('div');
+    bookItemDiv.classList.add('books-by-category-item');
 
-    const bookImgDiv = document.createElement('div');
-    bookImgDiv.classList.add('book-img');
-    const bookImg = document.createElement('img');
-    bookImg.src = book.photo_uri;
-    bookImg.alt = book.title;
-    bookImgDiv.appendChild(bookImg);
-    bookCard.appendChild(bookImgDiv);
-
-    const bookInfoDiv = document.createElement('div');
-    bookInfoDiv.classList.add('book-info');
-    const bookInfoText = document.createElement('p');
-    bookInfoText.textContent = book.info;
-    bookInfoDiv.appendChild(bookInfoText);
-    bookCard.appendChild(bookInfoDiv);
-
-    return bookCard;
+    // Create the HTML structure for the book item
+    bookItemDiv.innerHTML = `
+    <a href="/book?id=${encodeURIComponent(bookData.id)}">
+        <ul class="all3thingsAgain">
+            <li class="books-by-category-item-img-border">
+                <img src="${bookData.photo_uri}" alt="${bookData.id}">
+            </li>
+            <li class="books-by-category-item-name">${bookData.title}</li>
+            <li class="books-by-category-item-author">${bookData.author}</li>
+        </ul>
+    `;
+    return bookItemDiv;
 }
 
-document.getElementById("form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Collect the checked categories
-    let selectedCategories = [];
-    let checkboxes = document.getElementsByName("category");
-    checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-            selectedCategories.push(parseInt(checkbox.value)); // Convert to integer if needed
-        }
-    });
-
+function fetchBooksByCategoryAndString(ids, queryString) {
     // Make an AJAX POST request with the selected category IDs
     fetch("/books", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({category_ids: selectedCategories})
+        body: JSON.stringify({
+            category_ids: ids,
+            query: queryString
+        })
     })
         .then(response => {
             if (!response.ok) {
@@ -47,36 +36,52 @@ document.getElementById("form").addEventListener("submit", function (event) {
             return response.json(); // Assuming response is JSON
         })
         .then(data => {
-            const bookContainer = document.getElementById('books');
+            const bookContainer = document.querySelector('.books-by-category');
             bookContainer.innerHTML = ''; // Clear previous content
 
             data.forEach(book => {
-                const bookCard = createBookCard(book);
+                const bookCard = appendBookItem(book);
                 bookContainer.appendChild(bookCard);
             });
         })
         .catch(error => {
             console.error("There was a problem with the fetch operation:", error);
         });
+}
+
+const updateSelectedBooks = function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    let form = document.getElementById('form');
+    let checkboxes = form.querySelectorAll('.category-genre-chekbox');
+    let checkedIndices = [];
+    checkboxes.forEach(function (checkbox, index) {
+        if (checkbox.checked) {
+            checkedIndices.push(index + 1);
+        }
+    });
+    fetchBooksByCategoryAndString(checkedIndices, '')
+}
+
+document.querySelectorAll('.category-genre-chekbox').forEach((box) => {
+    box.addEventListener("change", updateSelectedBooks)
 });
 
-// Fetch categories from the server and dynamically generate checkboxes
-fetch("/get_categories")
-    .then(response => response.json())
-    .then(categories => {
-        const form = document.getElementById("check");
-        Object.keys(categories).forEach(key => {
-            const id = key;
-            const name = categories[key];
-            const checkbox = document.createElement("input");
-            checkbox.type = "checkbox";
-            checkbox.name = "category";
-            checkbox.value = id;
-            const label = document.createElement("label");
-            label.textContent = name;
-            form.appendChild(checkbox);
-            form.appendChild(label);
-            form.appendChild(document.createElement("br"));
-        });
-    })
-    .catch(error => console.error('Error fetching categories:', error));
+search = document.querySelector('.input-find-book-name')
+search.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    let queryInput = document.querySelector('.input-text-book-name')
+    let form = document.getElementById('form');
+    let checkboxes = form.querySelectorAll('.category-genre-chekbox');
+    let checkedIndices = [];
+    checkboxes.forEach(function (checkbox, index) {
+        if (checkbox.checked) {
+            checkedIndices.push(index + 1);
+        }
+    });
+
+    fetchBooksByCategoryAndString(checkedIndices, queryInput.value.trim())
+})
+
+fetchBooksByCategoryAndString([], '')

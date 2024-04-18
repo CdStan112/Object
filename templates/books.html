@@ -45,7 +45,7 @@
 <body>
 <div class="header-wrapper1">
     <header class="header1">
-        <a href="../static/index.html" class="logo">
+        <a href="/" class="logo">
             <svg viewBox="0 0 232 56" width="232" height="56">
                 <use xlink:href="/static/img/sprite.svg#page-logo"></use>
             </svg>
@@ -82,7 +82,7 @@
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
-            <li><a href="../static/books.html">Книги</a></li>
+            <li><a href="/books">Книги</a></li>
             <li><a href="">Журналы</a></li>
             <li><a href="">Газеты</a></li>
         </ul>
@@ -99,19 +99,21 @@
                 <div class="forms">
                     <form id="form">
                         <ul class="genre-block">
-                            <li class="genre">Жанр</li>
-                            <li class="category-genre" id="category1"><input class="category-genre-checkbox"
-                                                                             type="checkbox"/>Категория 1
-                            </li>
-                            <li class="category-genre" id="category2"><input type="checkbox"/>Категория 1</li>
-                            <!--<div id="check"></div>-->
+                            <li class="genre" style="font-size: 30px">Жанр</li>
+                            {% for category in categories %}
+                                <li class="category-genre">
+                                    <label>
+                                        <input class="category-genre-chekbox" type="checkbox">{{ category }}
+                                    </label>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </form>
                 </div>
 
 
                 <div class="bodyDiv">
-                    <form action="" id="form2" class="input-find-book-name">
+                    <form action="" class="input-find-book-name">
                         <p>
                             <input class="input-text-book-name" id="text-cat" placeholder="Название книги" type="text"/>
                         </p>
@@ -119,28 +121,20 @@
                             <input type="submit" value="Поиск" class="button-find-book-name" id="find"/>
                         </p>
                     </form>
-                        <br/> <br/>
+                    <br/> <br/>
 
-                        <div class="books-by-category">
-                            <div class="books-by-category-item">
-                                <ul class="all3thingsAgain">
-                                    <li class="books-by-category-item-img-border">
-                                        <img src="../static/img/color-attack.png" alt="1"></li>
-                                    <li class="books-by-category-item-name">Название</li>
-                                    <li class="books-by-category-item-author">Автор</li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-
-                    <br/>
-                    <br/>
-                    <p id="p1"></p>
-                    <p id="p2"></p>
-                    <p id="p3"></p>
+                    <div class="books-by-category">
+                    </div>
                 </div>
+
+                <br/>
+                <br/>
+                <p id="p1"></p>
+                <p id="p2"></p>
+                <p id="p3"></p>
             </div>
         </div>
+    </div>
     </div>
 </main>
 <div class="footer-wrapper">
@@ -175,5 +169,6 @@
 </div>
 <script src="../static/js/script.js"></script>
 <script src="../static/js/slider2.js"></script>
+<script src="../static/js/books.js"></script>
 </body>
 </html>

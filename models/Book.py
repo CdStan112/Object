@@ -1,8 +1,7 @@
-from sqlalchemy import INTEGER, TEXT, ForeignKey
+from sqlalchemy import INTEGER, TEXT, ForeignKey, VARCHAR
 from sqlalchemy.orm import mapped_column, relationship
 
 from models import db
-from models.association_tables import books_categories
 
 
 class Book(db.Model):
@@ -12,7 +11,11 @@ class Book(db.Model):
     title = mapped_column(TEXT(), nullable=False)
     author = mapped_column(TEXT(), nullable=False)
     info = mapped_column(TEXT())
+    publisher = mapped_column(TEXT())
+    year = mapped_column(INTEGER())
+    age_restr = mapped_column(VARCHAR(8))
     photo_id = mapped_column(ForeignKey('photos.id'))
+    category_id = mapped_column(ForeignKey('bookcategories.id'))
 
     photo = relationship('Photo', foreign_keys=[photo_id])
-    categories = relationship('BookCategory', secondary=books_categories, back_populates='books')
+    category = relationship('BookCategory', foreign_keys=[category_id])

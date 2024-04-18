@@ -22,12 +22,20 @@ def index():
 
 @app.route('/books', methods=['GET'])
 def books():
-    return send_from_directory('static', 'books.html')
+    categories = BookCategory.query.order_by('id').all()
+    return render_template('books.html', categories=[category.name for category in categories])
 
 
 @app.route('/books', methods=['POST'])
 def fetch_books():
-    selected_books = Book.query.filter(Book.categories.any(BookCategory.id.in_(request.json['category_ids']))).all()
+    categories = request.json.get('category_ids')
+    selected_books = []
+    print(categories)
+    if not categories:
+        selected_books = Book.query.filter(Book.title.contains(request.json.get('query'))).all()
+    else:
+        selected_books = Book.query.filter(Book.category_id.in_(categories)).filter(
+            Book.title.contains(request.json.get('query'))).all()
     books_list = []
     for _book in selected_books:
         # Retrieve the photo URI if it exists
@@ -37,9 +45,8 @@ def fetch_books():
             'id': _book.id,
             'title': _book.title,
             'author': _book.author,
-            'info': _book.info,
             'photo_uri': photo_uri,
-            'categories': [category.name for category in _book.categories]
+            'category': BookCategory.query.get(_book.category_id).name
         }
         books_list.append(book_data)
 
@@ -51,7 +58,7 @@ def get_categories():
     return jsonify({category.id: category.name for category in BookCategory.query.all()})
 
 
-@app.route('/current-book', methods=['GET'])
+@app.route('/book', methods=['GET'])
 def add_book_page():
     book_id = request.args.get('id')
     if book_id is None:
@@ -63,36 +70,19 @@ def add_book_page():
     book_data = {
         'title': selected_book.title,
         'autor': selected_book.author,
-        'publisher': '',
-        'date_of_pub': '',
-        'age_restrictions': '',
+        'publisher': selected_book.publisher,
+        'date_of_pub': selected_book.year,
+        'age_restrictions': selected_book.age_restr,
         'description': selected_book.info,
         'photo': selected_book.photo.uri,
-        'categories': [category.name for category in selected_book.categories]
+        'category': selected_book.category.name
     }
 
     return render_template('current-book.html', book=book_data)
 
 
 with app.app_context():
-    db.drop_all()
     db.create_all()
-
-    db.session.add(Photo(uri='../static/img/example1.jpg'))
-
-    for i in range(10):
-        db.session.add(BookCategory(name='category' + str(i)))
-
-    for i in range(100):
-        book = Book(title=''.join(random.choices(string.ascii_letters + '    ', k=20)),
-                    author=''.join(random.choices(string.ascii_letters + '   ', k=10)),
-                    photo_id=1
-                    )
-        book.categories.extend(
-            BookCategory.query.filter(BookCategory.id.in_(range(10))).order_by(func.random()).limit(2).all())
-
-        db.session.add(book)
-        db.session.commit()
 
 if __name__ == '__main__':
     app.run()

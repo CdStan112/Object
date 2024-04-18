@@ -329,7 +329,7 @@ h5 {
 }
 
 .genre-block{
-    padding-top: 20px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -350,7 +350,10 @@ h5 {
 
 .category-genre input{
     margin: 0 10px 0 0;
+}
 
+.books-by-category-item a {
+    color: inherit;
 }
 
 .check {
@@ -459,7 +462,7 @@ h5 {
 }
 
 .button-find-book-name input:not([type="checkbox"]):active,
-.button-find-book-name input:not([type="checkbox"]):focus {
+.button-find-book-name input:not([type="checkbox"]):hover {
 
     background: rgba(45,45,180 ,1);
     color: white;
@@ -468,7 +471,9 @@ h5 {
 /*Карточка для книг----------------------------------------------------------------*/
 
 .books-by-category {
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px; /* Adjust the gap between cards as needed */
 }
 
 .books-by-category-item {
@@ -498,7 +503,7 @@ h5 {
 
 
 .books-by-category-item-name {
-    font-size: 30px;
+    font-size: 20px;
     text-align: left;
     padding: 10px 0px;
     overflow: hidden;
@@ -510,7 +515,7 @@ h5 {
     text-overflow: ellipsis;
     white-space: nowrap;
 
-    font-size: 20px;
+    font-size: 15px;
     text-align: left;
     padding: 10px 0px;
 }
@@ -837,7 +842,7 @@ input {
 }
 
 .signin-button input:not([type="checkbox"]):active,
-.signin-button input:not([type="checkbox"]):focus {
+.signin-button input:not([type="checkbox"]):hover {
     border: 1px solid rgb(253, 149, 1);
     background: rgb(253, 149, 1);
     color: white;
@@ -1256,7 +1261,25 @@ border: 2px solid red;
 }
 
 
+.category-genre-chekbox {
+    display: none;
+}
 
+/* Style the label */
+.category-genre label {
+    cursor: pointer; /* Change cursor to pointer when hovering over label */
+}
+
+/* Style label based on checkbox state */
+label:has(.category-genre-chekbox) {
+    color: black; /* Default label color */
+    transition: color 0.2s ease;
+}
+
+label:has(.category-genre-chekbox:checked) {
+    color: red; /* Change label color when checkbox is checked */
+    transition: color 0.2s ease;
+}
 
 
 

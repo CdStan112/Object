@@ -45,7 +45,7 @@
 <body>
 <div class="header-wrapper1">
     <header class="header1">
-        <a href="../static/index.html" class="logo">
+        <a href="/" class="logo">
             <svg viewBox="0 0 232 56" width="232" height="56">
                 <use xlink:href="/static/img/sprite.svg#page-logo"></use>
             </svg>
@@ -81,7 +81,7 @@
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
             <li><a href="">Кнопка</a></li>
-            <li><a href="../static/books.html">Книги</a></li>
+            <li><a href="/books">Книги</a></li>
             <li><a href="">Журналы</a></li>
             <li><a href="">Газеты</a></li>
         </ul>
@@ -100,71 +100,72 @@
                 <div class="editor-user-info-user-profile-info-and-password">
                     <div class="editor-user-info-user-profile-info" id="insert">
 
-                       <form id="formEdit" method="post">
-                        <table class="editor-table-user-profile">
-                            <tr id="nameRowEdit">
-                                <td class="editor-first-column-user-profile">Имя</td>
-                                <td class="editor-second-column-user-profile">
-                                    <p>
-                                        <input id="nameEditor" name="nameEditor" required="required" type="text"
-                                               placeholder="Имя"/>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr id="surnameRowEdit">
-                                <td class="editor-first-column-user-profile">Фамилия</td>
-                                <td class="editor-second-column-user-profile">
-                                    <p>
-                                        <input id="surnameEditor" name="surnameEditor" required="required" type="text"
-                                               placeholder="Фамилия"/>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr id="mailRowEdit">
-                                <td class="editor-first-column-user-profile">Эл. почта</td>
-                                <td class="editor-second-column-user-profile">
-                                    <p>
-                                        <input id="mailEditor" name="mailEditor" required="required" type="email"
-                                               placeholder="Эл. почта"/>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr id="numberRowEdit">
-                                <td class="editor-first-column-user-profile">Телефон</td>
-                                <td class="editor-second-column-user-profile">
-                                    <p>
-                                        <input id="numberEditor" name="numberEditor" type="tel"
-                                              pattern="\+?[0-9]{11}" required placeholder="Телефон"/>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr id="passwordRowEdit1">
-                                <td class="editor-first-column-user-profile">Пароль</td>
-                                <td class="editor-second-column-user-profile">
-                                    <p>
-                                        <input id="passwordEditor" name="password" required="required" type="password"
-                                               placeholder="Введите пароль" />
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr id="passwordRowEdit2">
-                                <td class="editor-first-column-user-profile">Повторите пароль</td>
-                                <td class="editor-second-column-user-profile">
-                                    <p>
-                                        <input id="passwordRepeatEditor" name="passwordRepeat" required="required"
-                                               type="password" placeholder="Повторите пароль" />
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                           </form>
+                        <form id="formEdit" method="post">
+                            <table class="editor-table-user-profile">
+                                <tr id="nameRowEdit">
+                                    <td class="editor-first-column-user-profile">Имя</td>
+                                    <td class="editor-second-column-user-profile">
+                                        <p>
+                                            <input id="nameEditor" name="nameEditor" required="required" type="text"
+                                                   placeholder="Имя"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr id="surnameRowEdit">
+                                    <td class="editor-first-column-user-profile">Фамилия</td>
+                                    <td class="editor-second-column-user-profile">
+                                        <p>
+                                            <input id="surnameEditor" name="surnameEditor" required="required"
+                                                   type="text"
+                                                   placeholder="Фамилия"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr id="mailRowEdit">
+                                    <td class="editor-first-column-user-profile">Эл. почта</td>
+                                    <td class="editor-second-column-user-profile">
+                                        <p>
+                                            <input id="mailEditor" name="mailEditor" required="required" type="email"
+                                                   placeholder="Эл. почта"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr id="numberRowEdit">
+                                    <td class="editor-first-column-user-profile">Телефон</td>
+                                    <td class="editor-second-column-user-profile">
+                                        <p>
+                                            <input id="numberEditor" name="numberEditor" type="tel"
+                                                   pattern="\+?[0-9]{11}" required placeholder="Телефон"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr id="passwordRowEdit1">
+                                    <td class="editor-first-column-user-profile">Пароль</td>
+                                    <td class="editor-second-column-user-profile">
+                                        <p>
+                                            <input id="passwordEditor" name="password" required="required"
+                                                   type="password"
+                                                   placeholder="Введите пароль"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr id="passwordRowEdit2">
+                                    <td class="editor-first-column-user-profile">Повторите пароль</td>
+                                    <td class="editor-second-column-user-profile">
+                                        <p>
+                                            <input id="passwordRepeatEditor" name="passwordRepeat" required="required"
+                                                   type="password" placeholder="Повторите пароль"/>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
 
 
                     <div class="editor-user-info-user-profile-password">
                         <a href="#" id="passwordToggle">Сохранить изменения</a>
                     </div>
-
 
 
                 </div>
