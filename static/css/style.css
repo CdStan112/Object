@@ -932,14 +932,328 @@ input {
 
 
 
+/*User profile------------------------------------------------------------------------*/
+
+
+.user-info-user-profile {
+    display: flex;
+
+    background: #f5f5f5;
+
+}
+
+.user-img-user-profile {
+    width: 260px;
+    height: 305px;
+}
+
+.user-img-user-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info-user-profile-name-edit-info {
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 100px;
+    display: flex;
+}
+
+.user-info-user-profile-name {
+    display: flex;
+}
+
+.user-info-user-profile-first-name{
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.user-info-user-profile-sur-name{
+    font-size: 30px;
+}
+
+.user-info-user-profile-name label {
+}
+
+.user-info-user-profile-edit {
+    display: flex;
+    font-weight: normal;
+    align-items: start;
+    font-size: 30px;
+}
+.user-info-user-profile-edit-text{
+    font-size: 15px;
+    color: lightblue;
+}
 
 
 
+.user-info-user-profile-info {
+ text-align: start;
+}
+
+/*Таблица*/
+
+.table-user-profile {
+    width: 400px;
+
+    border-spacing: 0px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    text-align: start;
+}
+
+.table-user-profile td {
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+
+.first-column-user-profile {
+    width: 50%;
+
+}
+.second-column-user-profile {
+    max-width: 200px;
+}
+
+/*Мои книги в профиле-----------------------------------------------------------------------------------*/
+/* Похожие */
+
+.mine-books-text-above {
+    font-size: 30px;
+    font-weight: normal;
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
 
 
 
+.mine-books-push-buttons {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 1500px;
+
+    justify-content: space-between;
 
 
+    z-index: 1;
+}
+
+.mine-books-push-buttons button {
+    cursor: pointer;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #d5c6c6;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    z-index: 1;
+}
+
+.mine-books-horiz {
+
+
+}
+
+.mine-books-horiz-item {
+    box-sizing: border-box;
+
+    min-width: 20%;
+    height: 400px;
+    padding: 0 20px;
+}
+
+.mine-books-all3things {
+
+    width: 100%;
+    height: 100%
+}
+
+.mine-books-horiz-item-img-border {
+
+
+    height: 65%;
+
+
+}
+
+.mine-books-horiz-item img {
+    object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.mine-books-horiz-item-name {
+
+    font-size: 30px;
+    text-align: left;
+    padding: 10px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mine-books-horiz-item-author {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 20px;
+    text-align: left;
+    padding: 10px 0px;
+}
+
+/*User profile editor------------------------------------------------------------------------*/
+
+.editor-user-info-user-profile {
+    display: flex;
+    background: #f5f5f5;
+}
+
+.editor-user-img-user-profile {
+    width: 260px;
+    height: 305px;
+}
+
+.editor-user-img-user-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.editor-user-info-user-profile-name-edit-info {
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 100px;
+    display: flex;
+}
+
+.editor-user-info-user-profile-name {
+    display: flex;
+}
+
+.editor-user-info-user-profile-first-name{
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.editor-user-info-user-profile-sur-name{
+    font-size: 30px;
+}
+
+.editor-user-info-user-profile-name label {
+}
+
+.editor-user-info-user-profile-edit {
+    display: flex;
+    font-weight: normal;
+    align-items: start;
+    font-size: 30px;
+}
+.editor-user-info-user-profile-edit-text{
+    font-size: 15px;
+    color: lightblue;
+}
+
+
+.editor-user-info-user-profile-info-and-password{
+
+}
+
+.editor-user-info-user-profile-info {
+ text-align: start;
+}
+
+/*Таблица*/
+
+.editor-table-user-profile {
+    width: 500px;
+    border-spacing: 0px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    text-align: start;
+}
+
+.editor-table-user-profile tr {
+
+
+}
+
+.editor-table-user-profile td {
+
+    height: 50px;
+    margin: 0;
+}
+
+
+.editor-first-column-user-profile {
+    width: 25%;
+
+}
+.editor-second-column-user-profile {
+
+}
+.editor-second-column-user-profile p{
+    margin: 0;
+
+}
+
+
+.editor-second-column-user-profile input:not([type="checkbox"]) {
+    width: 87%;
+
+    padding: 7px 5px 7px 32px;
+    border: 1px solid rgb(170, 170, 170);
+    box-sizing: content-box;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+}
+
+
+
+#nameRowEdit input[type="text"]:valid {
+border: 2px solid green;
+}
+
+#nameRowEdit input[type="text"]:invalid{
+border: 2px solid red;
+}
+
+
+
+#surnameRowEdit input[type="text"]:valid {
+border: 2px solid green;
+}
+
+#surnameRowEdit input[type="text"]:invalid {
+border: 2px solid red;
+}
+
+
+#mailRowEdit input[type="email"]:valid {
+border: 2px solid green;
+}
+
+#mailRowEdit input[type="email"]:invalid {
+border: 2px solid red;
+}
+
+
+#numberRowEdit input[type="tel"]:valid {
+border: 2px solid green;
+}
+
+#numberRowEdit input[type="tel"]:invalid {
+border: 2px solid red;
+}
 
 
 
