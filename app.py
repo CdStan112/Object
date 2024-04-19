@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_from_directory, render_template, redirect
+from flask import Flask, jsonify, request, render_template, redirect
 from flask_bcrypt import Bcrypt
 
 from models import db, BookCategory

@@ -1,8 +1,7 @@
 from sqlalchemy import INTEGER, VARCHAR
-from sqlalchemy.orm import mapped_column, relationship
+from sqlalchemy.orm import mapped_column
 
 from models import db
-from models.association_tables import books_categories
 
 
 class BookCategory(db.Model):

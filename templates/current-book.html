@@ -1,122 +1,122 @@
 {% extends "index.html" %}
 {% block content %}
-<main>
-    <div class="content-wrapper-color-gray">
-        <div class="content-wrapper1">
-            <div class="book-info-current-book">
-                <div class="book-img-current-book">
-                    <img src="{{ book.photo }}" alt="photo">
-                </div>
-                <div class="book-info-current-book-category-name-author">
-                    <div class="book-info-current-book-category">
-                        <label>{{ book.category }}</label>
+    <main>
+        <div class="content-wrapper-color-gray">
+            <div class="content-wrapper1">
+                <div class="book-info-current-book">
+                    <div class="book-img-current-book">
+                        <img src="{{ book.photo }}" alt="photo">
                     </div>
-                    <div class="book-info-current-book-name">
-                        <p>{{ book.title }}</p>
-                    </div>
-                    <div class="book-info-current-book-author">
-                        <p>{{ book.autor }}</p>
+                    <div class="book-info-current-book-category-name-author">
+                        <div class="book-info-current-book-category">
+                            <label>{{ book.category }}</label>
+                        </div>
+                        <div class="book-info-current-book-name">
+                            <p>{{ book.title }}</p>
+                        </div>
+                        <div class="book-info-current-book-author">
+                            <p>{{ book.autor }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="content-wrapper-color-white">
-        <div class="content-wrapper2">
-            <div class="book-info-current-book-characteristics-about">
-                <div class="book-info-current-book-characteristics">
-                    <p class="book-info-current-book-characteristics-text">Информация</p>
-                    <table class="table-current-book">
-                        <tr>
-                            <td class="first-column">Издательство</td>
-                            <td class="second-column">{{ book.publisher }}</td>
-                        </tr>
-                        <tr>
-                            <td class="first-column">Год издания</td>
-                            <td class="second-column">{{ book.date_of_pub }}</td>
-                        </tr>
-                        <tr>
-                            <td class="first-column">Возрастные ограничения</td>
-                            <td class="second-column">{{ book.age_restrictions }}</td>
-                        </tr>
-                    </table>
+        <div class="content-wrapper-color-white">
+            <div class="content-wrapper2">
+                <div class="book-info-current-book-characteristics-about">
+                    <div class="book-info-current-book-characteristics">
+                        <p class="book-info-current-book-characteristics-text">Информация</p>
+                        <table class="table-current-book">
+                            <tr>
+                                <td class="first-column">Издательство</td>
+                                <td class="second-column">{{ book.publisher }}</td>
+                            </tr>
+                            <tr>
+                                <td class="first-column">Год издания</td>
+                                <td class="second-column">{{ book.date_of_pub }}</td>
+                            </tr>
+                            <tr>
+                                <td class="first-column">Возрастные ограничения</td>
+                                <td class="second-column">{{ book.age_restrictions }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="book-info-current-book-about">
+                        <p class="book-info-current-book-about-text">Описание</p>
+                        <p class="book-info-current-book-about-long-text">{{ book.description }}</p>
+                    </div>
                 </div>
-                <div class="book-info-current-book-about">
-                    <p class="book-info-current-book-about-text">Описание</p>
-                    <p class="book-info-current-book-about-long-text">{{ book.description }}</p>
+                <div class="same">
+                    Похожие
                 </div>
-            </div>
-            <div class="same">
-                Похожие
-            </div>
-            <div id="similar" class="similar">
-                <div class="container-current-book">
-                    <div class="similar-wrapper">
-                        <div class="push-buttons"></div>
-                        <div class="similar-horiz">
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border">
-                                        <img src="../static/img/news2.png" alt="1"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Автор</li>
-                                </ul>
-                            </div>
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
-                                                                                   alt="2"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Автор</li>
-                                </ul>
-                            </div>
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
-                                                                                   alt="2"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
-                                </ul>
-                            </div>
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
-                                                                                   alt="2"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
-                                </ul>
-                            </div>
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
-                                                                                   alt="2"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
-                                </ul>
-                            </div>
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
-                                                                                   alt="2"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
-                                </ul>
-                            </div>
-                            <div class="similar-horiz-item">
-                                <ul class="all3things">
-                                    <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
-                                                                                   alt="2"></li>
-                                    <li class="similar-horiz-item-name">Название</li>
-                                    <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
-                                </ul>
+                <div id="similar" class="similar">
+                    <div class="container-current-book">
+                        <div class="similar-wrapper">
+                            <div class="push-buttons"></div>
+                            <div class="similar-horiz">
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border">
+                                            <img src="../static/img/news2.png" alt="1"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Автор</li>
+                                    </ul>
+                                </div>
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
+                                                                                       alt="2"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Автор</li>
+                                    </ul>
+                                </div>
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
+                                                                                       alt="2"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
+                                    </ul>
+                                </div>
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
+                                                                                       alt="2"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
+                                    </ul>
+                                </div>
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
+                                                                                       alt="2"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
+                                    </ul>
+                                </div>
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
+                                                                                       alt="2"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
+                                    </ul>
+                                </div>
+                                <div class="similar-horiz-item">
+                                    <ul class="all3things">
+                                        <li class="similar-horiz-item-img-border"><img src="../static/img/example1.jpg2"
+                                                                                       alt="2"></li>
+                                        <li class="similar-horiz-item-name">Название</li>
+                                        <li class="similar-horiz-item-author">Афигеть Какое Длиииииинное</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-<script src="../static/js/script.js"></script>
-<script src="../static/js/slider2.js"></script>
+    </main>
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/slider2.js"></script>
 {% endblock %}

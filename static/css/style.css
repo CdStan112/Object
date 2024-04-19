@@ -43,7 +43,6 @@ svg {
     margin: auto;
     display: flex;
     padding: 8px;
-
     justify-content: space-between;
 }
 
@@ -113,10 +112,6 @@ ul {
     margin-right: 5px;
 }
 
-.content-wrapper-color1 {
-
-}
-
 .content-wrapper-color-gray {
     background: #f5f5f5;
 }
@@ -146,9 +141,6 @@ body h2 {
     font-size: 3.6rem;
     font-weight: 300;
     margin-bottom: 2rem;
-}
-
-.news {
 }
 
 .news-content {
@@ -259,7 +251,6 @@ body h2 {
 /*Футер--------------------------------------------*/
 
 .footer-wrapper {
-
     background-color: black;
     padding: 50px 0px;
 }
@@ -270,7 +261,6 @@ footer {
     display: flex;
     padding: 8px;
     justify-content: space-between;
-    display: flex;
     color: white;
 }
 
@@ -279,7 +269,6 @@ footer {
     font-size: 20px;
     font-weight: normal;
     width: 20%;
-
 }
 
 h5 {
@@ -304,7 +293,7 @@ h5 {
 
 /*Категории ----------------------------------------------------------------------------------*/
 
-.content-total{
+.content-total {
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -313,12 +302,11 @@ h5 {
 
 .forms h1 {
     font-weight: 400;
-
     text-align: start;
     font-size: 2rem;
 }
 
-.genre-block{
+.genre-block {
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -329,16 +317,13 @@ h5 {
     border: 1px solid #797979;
     border-radius: 10px;
 }
-.genre-block li{
+
+.genre-block li {
     padding-left: 20px;
     margin-bottom: 5px;
 }
 
-.category-genre{
-
-}
-
-.category-genre input{
+.category-genre input {
     margin: 0 10px 0 0;
 }
 
@@ -347,20 +332,13 @@ h5 {
 }
 
 .check {
-
     text-align: start;
-
-
-}
-
-.forms {
 }
 
 .forms label {
     font-weight: 400;
     font-size: 1.1rem;
 }
-
 
 #check {
     width: 60%;
@@ -376,9 +354,7 @@ h5 {
     flex: 1;
 }
 
-
 /*Второй див----------------------------------------------*/
-
 .books {
     display: flex;
 }
@@ -400,10 +376,9 @@ h5 {
 
 .book-info {
     width: 600px;
-
 }
 
-.input-find-book-name{
+.input-find-book-name {
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -411,11 +386,9 @@ h5 {
 }
 
 
-
 .input-text-book-name:not([type="checkbox"]) {
     font-size: 18px;
     width: 350%;
-
     padding: 10px 5px 10px 32px;
     border: 2px solid rgb(170, 170, 170);
     box-sizing: content-box;
@@ -428,33 +401,31 @@ h5 {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
+
 .input-text-book-name:-moz-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
 
-.button-find-book-name{
+.button-find-book-name {
     margin: auto 10px auto auto;
 }
-
 
 .button-find-book-name input:not([type="checkbox"]) {
     cursor: pointer;
     width: 100%;
     padding: 10px 5px 10px 5px;
-
-    border: 2px solid rgba(45,45,180 ,0.5);
+    border: 2px solid rgba(45, 45, 180, 0.5);
     box-sizing: content-box;
     font-size: 18px;
-    color: rgba(45,45,180 ,0.5);
+    color: rgba(45, 45, 180, 0.5);
     border-radius: 5px;
     transition: all 0.1s linear;
 }
 
 .button-find-book-name input:not([type="checkbox"]):active,
 .button-find-book-name input:not([type="checkbox"]):hover {
-
-    background: rgba(45,45,180 ,1);
+    background: rgba(45, 45, 180, 1);
     color: white;
 }
 
@@ -475,7 +446,6 @@ h5 {
 
 
 .all3thingsAgain {
-
     width: 100%;
     height: 100%
 }
@@ -504,18 +474,10 @@ h5 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
     font-size: 15px;
     text-align: left;
     padding: 10px 0px;
 }
-
-
-
-
-
-
-
 
 
 /*Current book------------------------------------------------------------------------*/
@@ -523,9 +485,7 @@ h5 {
 
 .book-info-current-book {
     display: flex;
-
     background: #f5f5f5;
-
 }
 
 .book-img-current-book {
@@ -552,8 +512,6 @@ h5 {
 }
 
 .book-info-current-book-category label {
-
-
     background: #E1E1F4;
     border-radius: 2em;
     padding: 5px 15px;
@@ -562,12 +520,10 @@ h5 {
 }
 
 .book-info-current-book-name {
-
     display: flex;
     font-weight: normal;
     align-items: start;
     font-size: 30px;
-
 }
 
 .book-info-current-book-name p {
@@ -606,12 +562,10 @@ h5 {
 
 .first-column {
     max-width: 200px;
-
 }
 
 .second-column {
     max-width: 200px;
-
 }
 
 .book-info-current-book-characteristics-about {
@@ -622,7 +576,6 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: start;
-
 }
 
 .book-info-current-book-about {
@@ -673,10 +626,7 @@ h5 {
     flex-direction: row;
     position: absolute;
     gap: 1500px;
-
     justify-content: space-between;
-
-
     z-index: 1;
 }
 
@@ -692,43 +642,30 @@ h5 {
     z-index: 1;
 }
 
-.similar-horiz {
-
-
-}
-
 .similar-horiz-item {
     box-sizing: border-box;
-
     min-width: 20%;
     height: 400px;
     padding: 0 20px;
 }
 
 .all3things {
-
     width: 100%;
     height: 100%
 }
 
 .similar-horiz-item-img-border {
-
-
     height: 65%;
-
-
 }
 
 .similar-horiz-item img {
     object-fit: cover;
-
     width: 100%;
     height: 100%;
 }
 
 
 .similar-horiz-item-name {
-
     font-size: 30px;
     text-align: left;
     padding: 10px 0px;
@@ -740,14 +677,12 @@ h5 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
     font-size: 20px;
     text-align: left;
     padding: 10px 0px;
 }
 
 /*Окно регистрации ------------------------------------------------------------------------------*/
-
 .wrapper-reg ::-webkit-input-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
@@ -763,7 +698,6 @@ h5 {
     margin-left: 10px;
     margin-right: 10px;
     align-items: center;
-
 }
 
 .register-window {
@@ -776,37 +710,13 @@ h5 {
 }
 
 .register-form {
-
     display: flex;
     flex-direction: column;
-
 }
 
 .register-form p {
     margin: 10px 0;
 }
-
-/**** advanced input styling ****/
-/* placeholder */
-
-/*::-webkit-input-placeholder  {
-    color: rgb(190, 188, 188);
-    font-style: italic;
-}
-input:-moz-placeholder,
-textarea:-moz-placeholder{
-    color: rgb(190, 188, 188);
-    font-style: italic;
-}
-input {
-  outline: none;
-    margin-left: 10px;
-    margin-right: 10px;
-    align-items: center;
-
-}
-*/
-
 
 .wrapper-reg input:not([type="checkbox"]) {
     width: 82%;
@@ -858,10 +768,8 @@ input {
 }
 
 .login-form {
-
     display: flex;
     flex-direction: column;
-
 }
 
 .login-form p {
@@ -876,10 +784,12 @@ input {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
+
 .wrapper-log input:-moz-placeholder {
     color: rgb(190, 188, 188);
     font-style: italic;
 }
+
 .wrapper-log input {
     outline: none;
     margin-left: 10px;
@@ -925,16 +835,10 @@ input {
     justify-content: center;
 }
 
-
-
 /*User profile------------------------------------------------------------------------*/
-
-
 .user-info-user-profile {
     display: flex;
-
     background: #f5f5f5;
-
 }
 
 .user-img-user-profile {
@@ -959,16 +863,13 @@ input {
     display: flex;
 }
 
-.user-info-user-profile-first-name{
+.user-info-user-profile-first-name {
     font-size: 30px;
     margin-right: 5px;
 }
 
-.user-info-user-profile-sur-name{
+.user-info-user-profile-sur-name {
     font-size: 30px;
-}
-
-.user-info-user-profile-name label {
 }
 
 .user-info-user-profile-edit {
@@ -977,22 +878,20 @@ input {
     align-items: start;
     font-size: 30px;
 }
-.user-info-user-profile-edit-text{
+
+.user-info-user-profile-edit-text {
     font-size: 15px;
     color: lightblue;
 }
 
 
-
 .user-info-user-profile-info {
- text-align: start;
+    text-align: start;
 }
 
 /*Таблица*/
-
 .table-user-profile {
     width: 400px;
-
     border-spacing: 0px;
     margin: 20px 0 0 0;
     padding: 0;
@@ -1007,8 +906,8 @@ input {
 
 .first-column-user-profile {
     width: 50%;
-
 }
+
 .second-column-user-profile {
     max-width: 200px;
 }
@@ -1026,17 +925,13 @@ input {
 }
 
 
-
 .mine-books-push-buttons {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
     position: absolute;
     gap: 1500px;
-
     justify-content: space-between;
-
-
     z-index: 1;
 }
 
@@ -1052,43 +947,29 @@ input {
     z-index: 1;
 }
 
-.mine-books-horiz {
-
-
-}
-
 .mine-books-horiz-item {
     box-sizing: border-box;
-
     min-width: 20%;
     height: 400px;
     padding: 0 20px;
 }
 
 .mine-books-all3things {
-
     width: 100%;
     height: 100%
 }
 
 .mine-books-horiz-item-img-border {
-
-
     height: 65%;
-
-
 }
 
 .mine-books-horiz-item img {
     object-fit: cover;
-
     width: 100%;
     height: 100%;
 }
 
-
 .mine-books-horiz-item-name {
-
     font-size: 30px;
     text-align: left;
     padding: 10px 0px;
@@ -1100,14 +981,12 @@ input {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
     font-size: 20px;
     text-align: left;
     padding: 10px 0px;
 }
 
 /*User profile editor------------------------------------------------------------------------*/
-
 .editor-user-info-user-profile {
     display: flex;
     background: #f5f5f5;
@@ -1135,16 +1014,13 @@ input {
     display: flex;
 }
 
-.editor-user-info-user-profile-first-name{
+.editor-user-info-user-profile-first-name {
     font-size: 30px;
     margin-right: 5px;
 }
 
-.editor-user-info-user-profile-sur-name{
+.editor-user-info-user-profile-sur-name {
     font-size: 30px;
-}
-
-.editor-user-info-user-profile-name label {
 }
 
 .editor-user-info-user-profile-edit {
@@ -1153,22 +1029,17 @@ input {
     align-items: start;
     font-size: 30px;
 }
-.editor-user-info-user-profile-edit-text{
+
+.editor-user-info-user-profile-edit-text {
     font-size: 15px;
     color: lightblue;
 }
 
-
-.editor-user-info-user-profile-info-and-password{
-
-}
-
 .editor-user-info-user-profile-info {
- text-align: start;
+    text-align: start;
 }
 
 /*Таблица*/
-
 .editor-table-user-profile {
     width: 500px;
     border-spacing: 0px;
@@ -1177,13 +1048,7 @@ input {
     text-align: start;
 }
 
-.editor-table-user-profile tr {
-
-
-}
-
 .editor-table-user-profile td {
-
     height: 50px;
     margin: 0;
 }
@@ -1191,20 +1056,14 @@ input {
 
 .editor-first-column-user-profile {
     width: 25%;
-
 }
-.editor-second-column-user-profile {
 
-}
-.editor-second-column-user-profile p{
+.editor-second-column-user-profile p {
     margin: 0;
-
 }
-
 
 .editor-second-column-user-profile input:not([type="checkbox"]) {
     width: 87%;
-
     padding: 7px 5px 7px 32px;
     border: 1px solid rgb(170, 170, 170);
     box-sizing: content-box;
@@ -1212,48 +1071,41 @@ input {
     transition: all 0.2s linear;
 }
 
-
-
 #nameRowEdit input[type="text"]:valid {
-border: 2px solid green;
+    border: 2px solid green;
 }
 
-#nameRowEdit input[type="text"]:user-invalid{
-border: 2px solid red;
+#nameRowEdit input[type="text"]:user-invalid {
+    border: 2px solid red;
 }
-
-
 
 #surnameRowEdit input[type="text"]:valid {
-border: 2px solid green;
+    border: 2px solid green;
 }
 
 #surnameRowEdit input[type="text"]:user-invalid {
-border: 2px solid red;
+    border: 2px solid red;
 }
 
-
 #mailRowEdit input[type="email"]:valid {
-border: 2px solid green;
+    border: 2px solid green;
 }
 
 #mailRowEdit input[type="email"]:user-invalid {
-border: 2px solid red;
+    border: 2px solid red;
 }
 
-
 #numberRowEdit input[type="tel"]:valid {
-border: 2px solid green;
+    border: 2px solid green;
 }
 
 #numberRowEdit input[type="tel"]:user-invalid {
-border: 2px solid red;
+    border: 2px solid red;
 }
 
-.editor-user-info-user-profile-password{
-       margin-top: 50px;
+.editor-user-info-user-profile-password {
+    margin-top: 50px;
     margin-left: 100px;
-
 }
 
 .category-genre-chekbox {
@@ -1264,16 +1116,17 @@ border: 2px solid red;
 .category-genre label {
     cursor: pointer; /* Change cursor to pointer when hovering over label */
 }
+
 .editor-user-info-user-profile-password input:not([type="checkbox"]) {
     cursor: pointer;
     width: 100%;
     padding: 10px 5px 10px 5px;
-    border: 2px solid rgba(45,45,180 ,0.5);
+    border: 2px solid rgba(45, 45, 180, 0.5);
     box-sizing: content-box;
     font-size: 18px;
-    color: rgba(45,45,180 ,0.5);
+    color: rgba(45, 45, 180, 0.5);
     border-radius: 2em;
-    transition: all 0.25s  linear;
+    transition: all 0.25s linear;
 }
 
 /* Style label based on checkbox state */
@@ -1286,19 +1139,14 @@ label:has(.category-genre-chekbox:checked) {
     color: red; /* Change label color when checkbox is checked */
     transition: color 0.2s ease;
 }
+
 .editor-user-info-user-profile-password input:not([type="checkbox"]):active,
 .editor-user-info-user-profile-password input:not([type="checkbox"]):hover {
-    background: rgba(45,45,180 ,1);
+    background: rgba(45, 45, 180, 1);
     color: white;
 }
 
 /*Кнопка регистрации*/
-
-
-.register {
-
-}
-
 .register a:not([type="checkbox"]) {
     background: white;
     cursor: pointer;

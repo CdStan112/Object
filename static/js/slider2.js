@@ -1,7 +1,7 @@
 const slider2 = () => {
 
     const main = document.querySelector('.similar-wrapper'),
-        forButtons=document.querySelector('.push-buttons'),
+        forButtons = document.querySelector('.push-buttons'),
         wrap = document.querySelector('.similar-horiz'),
         slides = document.querySelector('.similar-horiz').children;
     let slidesToShow = 5,
@@ -14,18 +14,18 @@ const slider2 = () => {
             breakpoint: 1024,
             slidesToShow: 3
         },
-        {
-            breakpoint: 768,
-            slidesToShow: 2
-        },
-        {
-            breakpoint: 576,
-            slidesToShow: 1
-        }
+            {
+                breakpoint: 768,
+                slidesToShow: 2
+            },
+            {
+                breakpoint: 576,
+                slidesToShow: 1
+            }
         ];
 
 
-    let prev, next ,prevnext;
+    let prev, next, prevnext;
 
     const init = () => {
         responseInit();
@@ -100,13 +100,13 @@ const slider2 = () => {
     }
 
 
-   const addArrow = () => {
+    const addArrow = () => {
 
 
         prev = document.createElement('button');
-                 prev.style.cssText=''
+        prev.style.cssText = ''
         prev.className = 'glo-slider__prev';
-                 forButtons.appendChild(prev)
+        forButtons.appendChild(prev)
 
         const svgAddLeft = `<svg viewBox="0 0 960 960" height="60" width="60">
                     <use xlink:href="../static/img/sprite.svg#icon-service-arrow-left"></use>
@@ -117,7 +117,7 @@ const slider2 = () => {
 
         next.className = 'glo-slider__next';
         forButtons.appendChild(next)
-           const svgAddRight = `<svg viewBox="0 0 960 960" height="60" width="60">
+        const svgAddRight = `<svg viewBox="0 0 960 960" height="60" width="60">
                     <use xlink:href="../static/img/sprite.svg#icon-service-arrow-right"></use>
                 </svg>`
         next.innerHTML = svgAddRight;
@@ -153,10 +153,6 @@ const slider2 = () => {
 */
 
 
-
-
-
-
     const responseInit = () => {
         const slidesToShowDefault = slidesToShow;
         const allRespone = responsive.map(item => item.breakpoint);
@@ -172,8 +168,7 @@ const slider2 = () => {
                         addStyle();
                     }
                 }
-            }
-            else {
+            } else {
                 slidesToShow = slidesToShowDefault;
                 options.widthSlide = Math.floor(100 / slidesToShow);
                 addStyle();
