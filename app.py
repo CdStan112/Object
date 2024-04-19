@@ -1,11 +1,7 @@
-import random
-import string
-
-from flask import Flask, Response, jsonify, request, send_from_directory, render_template, redirect
+from flask import Flask, jsonify, request, send_from_directory, render_template, redirect
 from flask_bcrypt import Bcrypt
-from sqlalchemy import func
 
-from models import db, BookCategory, Photo
+from models import db, BookCategory
 from models.Book import Book
 
 app = Flask(__name__, static_url_path='/static')
@@ -17,7 +13,7 @@ bcrypt = Bcrypt(app)
 
 @app.route('/')
 def index():
-    return send_from_directory('static', 'index.html')
+    return render_template('index.html')
 
 
 @app.route('/books', methods=['GET'])
@@ -79,6 +75,16 @@ def add_book_page():
     }
 
     return render_template('current-book.html', book=book_data)
+
+
+@app.route('/profile')
+def user_profile():
+    return render_template('user-profile.html')
+
+
+@app.route('/edit_profile')
+def user_profile_edit():
+    return render_template('user-profile-edit.html')
 
 
 with app.app_context():

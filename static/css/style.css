@@ -100,10 +100,6 @@ a {
     text-decoration: none;
 }
 
-a:link {
-    color: #E33000;
-}
-
 /*Стиль кнопок*/
 ul {
     list-style-type: none;
@@ -1303,7 +1299,7 @@ label:has(.category-genre-chekbox:checked) {
 
 }
 
-.register input:not([type="checkbox"]) {
+.register a:not([type="checkbox"]) {
     background: white;
     cursor: pointer;
     width: 100%;
@@ -1316,8 +1312,8 @@ label:has(.category-genre-chekbox:checked) {
     transition: all 0.25s linear;
 }
 
-.register input:not([type="checkbox"]):active,
-.register input:not([type="checkbox"]):hover {
+.register a:not([type="checkbox"]):active,
+.register a:not([type="checkbox"]):hover {
     background: #E33000;
     color: white;
 }
