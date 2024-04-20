@@ -583,6 +583,7 @@ h5 {
     display: flex;
     align-items: start;
     flex-direction: column;
+    width: 60%;
 }
 
 .book-info-current-book-about-text {
@@ -995,6 +996,7 @@ h5 {
 .editor-user-img-user-profile {
     width: 260px;
     height: 305px;
+    margin: 30px;
 }
 
 .editor-user-img-user-profile img {
